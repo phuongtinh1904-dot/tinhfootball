@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BA LÔ LIVERPOOL FC - TINH FOOTBALL</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <span>TINH FOOTBALL</span>
+                <img src="img/Soccer Ball.svg" alt="Logo" class="logo-icon">
+            </a>
+            
+            <nav class="main-nav">
+                <a href="giay.html">GIÀY ĐÁ BÓNG</a>
+                <a href="phu-kien.html">PHỤ KIỆN</a>
+                <a href="quan-ao.html">QUẦN ÁO</a>
+                <a href="lien-he.html">LIÊN HỆ</a>
+            </nav>
+
+            <div class="header-actions">
+                 <div class="search-box" style="position: relative;">
+                <input type="text" id="search-input" placeholder="Tìm sản phẩm..." oninput="showLiveResults(this.value)">
+                <div id="live-search-results" class="live-search-dropdown"></div>
+            </div>
+                <div class="user-controls">
+                    <a href="cart.html" class="icon-btn">
+                        <img src="img/image 5.svg" alt="Cart">
+                        <span id="cart-count">0</span>
+                    </a>
+                    <a href="profile.html" class="icon-btn">
+                        <img src="img/image 6.svg" alt="User">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container section-padding">
+        <div class="detail-top-grid">
+            <div class="detail-image">
+                <img src="img2/imgphukien/pk3.png" alt="Ba lô Liverpool FC" id="main-product-img">
+            </div>
+
+            <div class="detail-info">
+                <h1 class="detail-title">BA LÔ LIVERPOOL FC - ADIDAS REDS</h1>
+                
+                <div class="detail-price-box">
+                    <span class="curr-price">900,000₫</span>
+                </div>
+
+                <div class="size-selector">
+                    <span class="label">Kích Thước</span>
+                    <div class="size-grid">
+                        <button class="size-item" onclick="selectSize(this)">Free Size</button>
+                    </div>
+                </div>
+
+                <div class="qty-selector">
+                    <span class="label">Số Lượng</span>
+                    <div class="qty-controls">
+                        <button class="qty-btn" onclick="changeQty(-1)">-</button>
+                        <input type="number" id="quantity" value="1" min="1">
+                        <button class="qty-btn" onclick="changeQty(1)">+</button>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn-add-cart" onclick="addToCart()">Thêm vào giỏ hàng</button>
+                    <button class="btn-buy-now" onclick="buyNow()">MUA NGAY</button>
+                </div>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="detail-bottom-content">
+            <section class="description">
+                <h2>MÔ TẢ SẢN PHẨM</h2>
+                <p>Thể hiện tình yêu bất diệt với đội bóng vùng Merseyside cùng chiếc <strong>Ba lô Liverpool FC</strong> chính hãng từ adidas. Đây không chỉ là một phụ kiện đựng đồ mà còn là cách để bạn tự hào thể hiện màu sắc bóng đá của mình ở bất cứ đâu.</p>
+                <p>Thiết kế tinh tế kết hợp giữa tính năng động và sự bền bỉ, chiếc ba lô này luôn là người bạn đồng hành tin cậy của các chiến binh Reds hùng mạnh trên mọi nẻo đường đến sân tập hay trong những chuyến đi xa.</p>
+                
+                <h3 style="margin-top: 20px;">Đặc điểm nổi bật</h3>
+                <ul>
+                    <li><strong>Huy hiệu Liverpool FC:</strong> Được in sắc nét ở mặt trước, khẳng định niềm tự hào và sự đồng hành cùng câu lạc bộ.</li>
+                    <li><strong>Quai đeo điều chỉnh:</strong> Thiết kế thông minh giúp bạn luôn mang ba lô một cách thoải mái, giảm áp lực lên vai dù mang theo nhiều vật dụng.</li>
+                    <li><strong>Ngăn chứa rộng rãi:</strong> Đủ diện tích cho giày đá bóng, quần áo tập và các phụ kiện cá nhân khác.</li>
+                    <li><strong>Chất liệu bền bỉ:</strong> Vải polyester cao cấp chống mài mòn, giúp bảo vệ đồ dùng bên trong an toàn.</li>
+                </ul>
+            </section>
+
+            <section class="policy">
+                <h2>CHÍNH SÁCH BẢO HÀNH</h2>
+                
+                <h3>1. Thời hạn bảo hành</h3>
+                <p>TINH FOOTBALL hỗ trợ bảo hành sửa chữa miễn phí trong vòng 6 tháng đối với các sản phẩm ba lô và túi thể thao.</p>
+
+                <h3>2. Trường hợp được bảo hành miễn phí</h3>
+                <ul>
+                    <li>Lỗi khóa kéo (zipper)</li>
+                    <li>Bung đường chỉ khâu quai đeo hoặc thân túi</li>
+                    <li>Lỗi in ấn huy hiệu từ phía nhà sản xuất</li>
+                </ul>
+
+                <h3>3. Thông tin cần có để được hỗ trợ bảo hành</h3>
+                <p>- Hóa đơn mua hàng trực tiếp hoặc dữ liệu đơn hàng online</p>
+                <p>- Thông tin tài khoản khách hàng trên hệ thống TINH FOOTBALL</p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer" style="background-image: url('img/footer.png');">
+        <div class="footer-overlay">
+            <div class="container footer-flex">
+                <div class="footer-left">
+                    <h2>TINH FOOTBALL</h2>
+                    <p>ĐỒNG HÀNH CÙNG BẠN TRÊN MỌI MẶT SÂN CỎ</p>
+                </div>
+                <div class="footer-right">
+                    <div class="f-col">
+                        <h3>Hotline</h3>
+                        <a href="tel:0362547895" class="footer-link">0362547895</a>
+                        <a href="chinh-sach.html" class="footer-link">Chính sách mua hàng</a>
+                    </div>
+                    <div class="f-col">
+                        <a href="cham-soc.html" class="footer-link">Chăm sóc hỗ trợ</a>
+                        <p class="footer-text-only">Hỗ trợ đổi trả</p>
+                        <a href="#" class="footer-link">Địa chỉ: 180 Cao Lỗ, P4, Q8</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">© 2026 TINH FOOTBALL. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="js/js1"></script>
+</body>
+</html>

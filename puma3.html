@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUMA KING 20 PRO CAGE - TINH FOOTBALL</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <span>TINH FOOTBALL</span>
+                <img src="img/Soccer Ball.svg" alt="Logo" class="logo-icon">
+            </a>
+            
+            <nav class="main-nav">
+                <a href="giay.html">GIÀY ĐÁ BÓNG</a>
+                <a href="phu-kien.html">PHỤ KIỆN</a>
+                <a href="quan-ao.html">QUẦN ÁO</a>
+                <a href="lien-he.html">LIÊN HỆ</a>
+            </nav>
+
+            <div class="header-actions">
+                 <div class="search-box" style="position: relative;">
+                <input type="text" id="search-input" placeholder="Tìm sản phẩm..." oninput="showLiveResults(this.value)">
+                <div id="live-search-results" class="live-search-dropdown"></div>
+            </div>
+                <div class="user-controls">
+                    <a href="cart.html" class="icon-btn">
+                        <img src="img/image 5.svg" alt="Cart">
+                        <span id="cart-count">0</span>
+                    </a>
+                    <a href="profile.html" class="icon-btn">
+                        <img src="img/image 6.svg" alt="User">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container section-padding">
+        <div class="detail-top-grid">
+            <div class="detail-image">
+                <img src="img2/imgpuma/p3.png" alt="PUMA KING 20 PRO CAGE" id="main-product-img">
+            </div>
+            <div class="detail-info">
+                <h1 class="detail-title">PUMA KING 20 PRO CAGE - 108463-01 - TRẮNG/XANH LÁ</h1>
+                
+                <div class="detail-price-box">
+                    <span class="curr-price">3,850,000₫</span>
+                </div>
+
+                <div class="size-selector">
+                    <span class="label">Kích Thước</span>
+                    <div class="size-grid">
+                        <button class="size-item" onclick="selectSize(this)">39</button>
+                        <button class="size-item" onclick="selectSize(this)">40</button>
+                        <button class="size-item" onclick="selectSize(this)">40.5</button>
+                        <button class="size-item" onclick="selectSize(this)">41</button>
+                        <button class="size-item" onclick="selectSize(this)">41.5</button>
+                        <button class="size-item" onclick="selectSize(this)">42</button>
+                        <button class="size-item" onclick="selectSize(this)">43</button>
+                    </div>
+                </div>
+
+                <div class="qty-selector">
+                    <span class="label">Số Lượng</span>
+                    <div class="qty-controls">
+                        <button class="qty-btn" onclick="changeQty(-1)">-</button>
+                        <input type="number" id="quantity" value="1" min="1">
+                        <button class="qty-btn" onclick="changeQty(1)">+</button>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn-add-cart" onclick="addToCart()">Thêm vào giỏ hàng</button>
+                    <button class="btn-buy-now" onclick="buyNow()">MUA NGAY</button>
+                </div>
+            </div>
+        </div>
+
+        <hr class="divider">
+        <div class="detail-bottom-content">
+            <section class="description">
+                <h2>MÔ TẢ SẢN PHẨM</h2>
+                <h3>PUMA KING 20 PRO CAGE – UNLEASHED PACK (2026)</h3>
+                <p>Chào mừng thế hệ thứ 20 của dòng giày huyền thoại <strong>"KING"</strong>. Nằm trong bộ sưu tập <strong>UNLEASHED PACK</strong>, phiên bản King 20 Pro Cage đã được thiết kế lại hoàn toàn để trở thành cỗ máy kiểm soát tối thượng trên mặt sân cỏ nhân tạo, mang đến trải nghiệm "vượt xa cả đồ thật".</p>
+                
+                <h3 style="margin-top: 20px;">Công nghệ mang tính cách mạng</h3>
+                <ul>
+                    <li><strong>Upper TOTALTOUCH đột phá:</strong> Cấu trúc 5 lớp vật liệu mô phỏng da thật, mang lại cảm giác êm ái, mềm mại tuyệt đối nhưng vẫn giữ form dáng cực tốt qua thời gian.</li>
+                    <li><strong>Lớp phủ Coating thông minh:</strong> Bề mặt được ép lớp màng đặc biệt giúp chống thấm nước và cung cấp độ bám dính hoàn hảo để kiểm soát bóng dính chân.</li>
+                    <li><strong>Lưỡi gà rời (Independent Tongue):</strong> Thiết kế thực dụng giúp xỏ giày trơn tru và dễ dàng điều chỉnh độ ôm cho những anh em có mu bàn chân cao.</li>
+                    <li><strong>Đệm gót thích ứng (Custom Fit):</strong> Tự động tinh chỉnh theo hình dáng gót chân người mang, tạo hiệu ứng khóa gót chắc chắn và êm ái.</li>
+                    <li><strong>Đế Cage đinh dăm (TF):</strong> Hệ thống đinh cao su phân bổ khoa học, hỗ trợ bứt tốc và chuyển hướng linh hoạt trên sân cỏ nhân tạo.</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>Lối chơi:</strong> Phù hợp cho tiền vệ kiến thiết, hậu vệ và những cầu thủ thiên về điều tiết nhịp độ trận đấu. Tương thích tốt với chân thon đến chân bè nhiều.</p>
+            </section>
+            <section class="policy">
+                <h2>CHÍNH SÁCH BẢO HÀNH</h2>
+                
+                <h3>1. Thời hạn bảo hành</h3>
+                <p>TINH FOOTBALL hỗ trợ bảo hành sửa chữa miễn phí trong vòng 6 tháng đối với các sản phẩm do chính TINH FOOTBALL phân phối.</p>
+
+                <h3>2. Trường hợp được bảo hành miễn phí</h3>
+                <ul>
+                    <li>Hở keo</li>
+                    <li>Đứt chỉ</li>
+                    <li>Các lỗi kỹ thuật tương tự phát sinh từ phía nhà sản xuất</li>
+                </ul>
+
+                <h3>3. Thông tin cần có để được hỗ trợ bảo hành</h3>
+                <p>- Hóa đơn mua hàng</p>
+                <p>- Dữ liệu đơn hàng trên hệ thống</p>
+                <p>- Thông tin kích hoạt bảo hành của shop</p>
+            </section>
+        </div>
+    </main>
+    <footer class="main-footer" style="background-image: url('img/footer.png');">
+        <div class="footer-overlay">
+            <div class="container footer-flex">
+                <div class="footer-left">
+                    <h2>TINH FOOTBALL</h2>
+                    <p>ĐỒNG HÀNH CÙNG BẠN TRÊN MỌI MẶT SÂN CỎ</p>
+                </div>
+                <div class="footer-right">
+                    <div class="f-col">
+                        <h3>Hotline</h3>
+                        <a href="tel:0362547895" class="footer-link">0362547895</a>
+                        <a href="chinh-sach.html" class="footer-link">Chính sách mua hàng</a>
+                    </div>
+                    <div class="f-col">
+                        <a href="cham-soc.html" class="footer-link">Chăm sóc hỗ trợ</a>
+                        <p class="footer-text-only">Hỗ trợ đổi trả</p>
+                        <a href="#" class="footer-link">Địa chỉ: 180 Cao Lỗ, P4, Q8</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">© 2026 TINH FOOTBALL. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="js/js1"></script>
+</body>
+</html>

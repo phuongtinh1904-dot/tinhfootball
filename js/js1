@@ -1,0 +1,255 @@
+
+// 1. XỬ LÝ SỐ LƯỢNG (NÚT + VÀ -)
+function changeQty(amount) {
+    const qtyInput = document.getElementById('quantity');
+    if (qtyInput) {
+        let currentQty = parseInt(qtyInput.value) || 1;
+        currentQty += amount;
+        // Đảm bảo số lượng không nhỏ hơn 1
+        if (currentQty < 1) currentQty = 1;
+        qtyInput.value = currentQty;
+    }
+}
+
+// 2. XỬ LÝ CHỌN SIZE
+function selectSize(btn) {
+    // Xóa class 'active' của tất cả các nút size
+    const allSizes = document.querySelectorAll('.size-item');
+    allSizes.forEach(item => item.classList.remove('active'));
+    
+    // Thêm class 'active' cho nút vừa được bấm
+    btn.classList.add('active');
+}
+
+// 3. LOGIC LƯU DỮ LIỆU (Dùng chung cho Add to Cart & Buy Now)
+function addToItemToStorage() {
+    // Kiểm tra xem đã chọn size chưa
+    const selectedSizeBtn = document.querySelector('.size-item.active'); 
+    if (!selectedSizeBtn) {
+        alert('Vui lòng chọn size trước khi mua hàng!');
+        return false; // Trả về false để dừng các hàm phía sau
+    }
+
+    // Lấy thông tin từ giao diện
+    const nameNode = document.querySelector('.detail-title');
+    const priceNode = document.querySelector('.curr-price');
+    const imgNode = document.querySelector('#main-product-img');
+    const qtyNode = document.getElementById('quantity');
+
+    // Nếu thiếu thông tin cơ bản thì báo lỗi
+    if (!nameNode || !priceNode) {
+        console.error("Không tìm thấy thông tin sản phẩm (class .detail-title hoặc .curr-price)");
+        return false;
+    }
+
+    const productName = nameNode.innerText;
+    const productPrice = priceNode.innerText;
+    const productImg = imgNode ? imgNode.src : "";
+    const quantity = qtyNode ? parseInt(qtyNode.value) : 1;
+    const size = selectedSizeBtn.innerText;
+
+    // Tạo đối tượng sản phẩm
+    const product = { 
+        name: productName, 
+        price: productPrice, 
+        image: productImg, 
+        quantity: quantity, 
+        size: size 
+    };
+    
+    // Lấy giỏ hàng từ LocalStorage
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    // Kiểm tra xem sản phẩm đã có trong giỏ chưa (cùng tên và cùng size)
+    const existingIdx = cart.findIndex(item => item.name === product.name && item.size === product.size);
+    
+    if (existingIdx > -1) {
+        // Nếu có rồi thì tăng số lượng
+        cart[existingIdx].quantity += quantity;
+    } else {
+        // Nếu chưa có thì thêm mới
+        cart.push(product);
+    }
+    
+    // Lưu ngược lại vào LocalStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+    return true; // Trả về true báo hiệu thành công
+}
+
+// 4. NÚT THÊM VÀO GIỎ HÀNG
+function addToCart() {
+    if (addToItemToStorage()) {
+        updateCartCount(); // Cập nhật số trên icon giỏ hàng
+        alert('Đã thêm sản phẩm vào giỏ hàng của TINH FOOTBALL!');
+    }
+}
+
+// 5. NÚT MUA NGAY
+function buyNow() {
+    if (addToItemToStorage()) {
+        // Nếu lưu thành công (đã chọn size) thì nhảy trang
+        window.location.href = 'checkout.html';
+    }
+}
+// 6. CẬP NHẬT SỐ LƯỢNG TRÊN ICON HEADER
+function updateCartCount() {
+    const countElement = document.getElementById('cart-count');
+    if (countElement) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        // Tính tổng số lượng tất cả sản phẩm
+        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+        countElement.innerText = totalItems;
+    }
+}
+
+// Chạy hàm cập nhật số lượng mỗi khi load trang bất kỳ
+document.addEventListener('DOMContentLoaded', updateCartCount);
+
+
+
+// ==========================================
+// 1. DANH SÁCH 36 SẢN PHẨM (PHẢI ĐỂ TRÊN CÙNG)
+// ==========================================
+const allProducts = [
+    // GIÀY ĐÁ BÓNG
+    { id: 1, name: "JOMA MUNDIAL TF 2502", price: "1,700,000VNĐ", img: "img2/imgjoma/1.png", link: "joma1.html" },
+    { id: 2, name: "JOMA FS REACTIVE TF 2402", price: "1,850,000VNĐ", img: "img2/imgjoma/2.png", link: "joma2.html" },
+    { id: 3, name: "JOMA FS REACTIVE TF 2402", price: "1,850,000VNĐ", img: "img2/imgjoma/3.png", link: "joma3.html" },
+    { id: 4, name: "JOMA TOP FLEX TF 2502", price: "1,550,000VNĐ", img: "img2/imgjoma/4.png", link: "joma4.html" },
+    { id: 5, name: "MIZUNO MORELIA II PRO AS", price: "2,200,000VNĐ", img: "img2/imgmizuno/1.png", link: "mizuno1.html" },
+    { id: 6, name: "MIZUNO MORELIA SALA JAPAN TF", price: "3,850,000VNĐ", img: "img2/imgmizuno/2.png", link: "mizuno2.html" },
+    { id: 7, name: "MIZUNO MORELIA NEO IV PRO AS", price: "2,550,000VNĐ", img: "img2/imgmizuno/3.png", link: "mizuno3.html" },
+    { id: 8, name: "MIZUNO MORELIA SALA JAPAN TF", price: "3,850,000VNĐ", img: "img2/imgmizuno/4.png", link: "mizuno4.html" },
+    { id: 9, name: "PUMA FUTURE 8 PRO CAGE", price: "2,700,000VNĐ", img: "img/puma1.png", link: "puma1.html" },
+    { id: 10, name: "PUMA ULTRA 6 MATCH RE-CHARGE", price: "1,790,000VNĐ", img: "img/puma2.png", link: "puma2.html" },
+    { id: 11, name: "PUMA KING 20 PRO CAGE", price: "3,850,000VNĐ", img: "img/puma3.png", link: "puma3.html" },
+    { id: 12, name: "PUMA FUTURE 9 MATCH", price: "1,850,000VNĐ", img: "img/puma4.png", link: "puma4.html" },
+
+    // QUẦN ÁO
+    { id: 13, name: "Áo Đấu Sân Khách Argentina 26 Authentic", price: "3.350.000₫", img: "img2/imgquanao/qa1.png", link: "quanao1.html" },
+    { id: 14, name: "Áo Đấu Sân Khách Nhật Bản 26 Authentic", price: "3.350.000₫", img: "img2/imgquanao/qa2.png", link: "quanao2.html" },
+    { id: 15, name: "Áo Đấu Sân Khách Tây Ban Nha 26", price: "3.350.000₫", img: "img2/imgquanao/qa3.png", link: "quanao3.html" },
+    { id: 16, name: "Áo Đấu Sân Khách Đức 26 Authentic", price: "3.350.000₫", img: "img2/imgquanao/qa4.png", link: "quanao4.html" },
+    { id: 17, name: "Áo Đấu Sân Khách Ý 26 Authentic", price: "3.350.000₫", img: "img2/imgquanao/qa5.png", link: "quanao5.html" },
+    { id: 18, name: "Áo Đấu Sân Nhà Đức 26 Authentic", price: "3.500.000₫", img: "img2/imgquanao/qa6.png", link: "quanao6.html" },
+    { id: 19, name: "Áo Đấu Sân Nhà Nhật Bản 26/27 Authentic", price: "3.500.000₫", img: "img2/imgquanao/qa7.png", link: "quanao7.html" },
+    { id: 20, name: "Áo Đấu Sân Nhà Tây Ban Nha 26 Authentic", price: "3.500.000₫", img: "img2/imgquanao/qa8.png", link: "quanao8.html" },
+    // PHỤ KIỆN
+    { id: 26, name: "Bọc ống đồng Adidas Tiro", price: "250.000₫", img: "img2/imgphukien/pk2.png", link: "phukien2.html" },
+    { id: 27, name: "Găng tay thủ môn Predator", price: "850.000₫", img: "img2/imgphukien/pk3.png", link: "phukien3.html" },
+    { id: 30, name: "Bóng Trionda Club World Cup 26", price: "650.000₫", img: "img2/imgphukien/pk6.png", link: "phukien6.html" },
+    { id: 31, name: "Bóng UEFA Champions League Final", price: "650.000₫", img: "img2/imgphukien/pk7.png", link: "phukien7.html" },
+    { id: 32, name: "ADIDAS PREDATOR 26 LEAGUE", price: "2,050,000VNĐ", img: "img/adidas1.png", link: "adidas1.html" },
+    { id: 32, name: "ADIDAS COPA PURE 3", price: "1,950,000VNĐ", img: "img/adidas2.png", link: "adidas2.html" },
+    { id: 32, name: "ADIDAS X CRAZYFAST MESSI.3", price: "3,850,000VNĐ", img: "img/adidas3.png", link: "adidas3.html" },
+    { id: 32, name: "ADIDAS F50 MESSI LEAGUE", price: "3,850,000VNĐ", img: "img/adidas4.png", link: "adidas4.html" },
+    { id: 32, name: "Bóng Tập Luyện Trionda World Cup 26", price: "650.000₫", img: "img2/imgphukien/pk8.png", link: "phukien8.html" },
+    { id: 32, name: "NIKE ZOOM MERCURIAL VAPOR 16", price: "1,890,000VNĐ", img: "img/nike1.png", link: "nike1.html" },
+    { id: 32, name: "NIKE TIEMPO LEGEND 10", price: "1,750,000VNĐ", img: "img/nike2.png", link: "nike2.html" },
+    { id: 32, name: "NIKE PHANTOM GX 2", price: "1,850,000VNĐ", img: "img/nike3.png", link: "nike3.html" },
+    { id: 32, name: "NIKE TIEMPO MAESTRO", price: "2,150,000VNĐ", img: "img/nike4.png", link: "nike4.html" },
+
+];
+
+// ==========================================
+// 2. HÀM TÌM KIẾM TRỰC TIẾP (LIVE SEARCH)
+// ==========================================
+function showLiveResults(query) {
+    const dropdown = document.getElementById('live-search-results');
+    console.log("Đang gõ từ khóa:", query);
+
+    if (!query.trim()) {
+        dropdown.style.display = "none";
+        return;
+    }
+
+    // Lọc sản phẩm
+    const match = allProducts.filter(p => p.name.toLowerCase().includes(query.toLowerCase()));
+    console.log("Tìm thấy:", match.length, "sản phẩm");
+
+    if (match.length > 0) {
+        dropdown.innerHTML = match.map(p => `
+            <a href="${p.link}" style="display: flex; align-items: center; padding: 10px; border-bottom: 1px solid #eee; text-decoration: none; color: black;">
+                <img src="${p.img}" style="width: 40px; height: 40px; margin-right: 10px; object-fit: contain;">
+                <div>
+                    <div style="font-weight: bold; font-size: 14px;">${p.name}</div>
+                    <div style="color: red; font-size: 12px;">${p.price}</div>
+                </div>
+            </a>
+        `).join('');
+        dropdown.style.display = "block";
+    } else {
+        dropdown.innerHTML = '<div style="padding: 10px; font-size: 13px;">Không tìm thấy sản phẩm...</div>';
+        dropdown.style.display = "block";
+    }
+}
+
+// ==========================================
+// 3. CÁC HÀM GIỎ HÀNG (CŨ)
+// ==========================================
+function changeQty(amount) {
+    const qtyInput = document.getElementById('quantity');
+    if (qtyInput) {
+        let val = parseInt(qtyInput.value) || 1;
+        val += amount;
+        if (val < 1) val = 1;
+        qtyInput.value = val;
+    }
+}
+
+function selectSize(btn) {
+    document.querySelectorAll('.size-item').forEach(item => item.classList.remove('active'));
+    btn.classList.add('active');
+}
+
+function addToItemToStorage() {
+    const selectedSizeBtn = document.querySelector('.size-item.active'); 
+    if (!selectedSizeBtn) {
+        alert('Vui lòng chọn size trước khi mua hàng!');
+        return false;
+    }
+    const name = document.querySelector('.detail-title').innerText;
+    const price = document.querySelector('.curr-price').innerText;
+    const img = document.querySelector('#main-product-img').src;
+    const qty = parseInt(document.getElementById('quantity').value) || 1;
+    const size = selectedSizeBtn.innerText;
+
+    const product = { name: name, price: price, image: img, quantity: qty, size: size };
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const idx = cart.findIndex(item => item.name === product.name && item.size === product.size);
+    if (idx > -1) cart[idx].quantity += qty;
+    else cart.push(product);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    return true;
+}
+
+function addToCart() {
+    if (addToItemToStorage()) {
+        updateCartCount();
+        alert('Đã thêm sản phẩm vào giỏ hàng!');
+    }
+}
+
+function buyNow() {
+    if (addToItemToStorage()) window.location.href = 'checkout.html';
+}
+
+function updateCartCount() {
+    const countElement = document.getElementById('cart-count');
+    if (countElement) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const total = cart.reduce((sum, item) => sum + item.quantity, 0);
+        countElement.innerText = total;
+    }
+}
+
+window.onload = updateCartCount;
+
+// Đóng dropdown khi click ra ngoài
+document.addEventListener('click', function(e) {
+    const dropdown = document.getElementById('live-search-results');
+    const input = document.getElementById('search-input');
+    if (dropdown && e.target !== dropdown && e.target !== input) {
+        dropdown.style.display = "none";
+    }
+});

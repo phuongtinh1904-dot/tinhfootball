@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIKE ZOOM MERCURIAL VAPOR 16 ACADEMY TF - TINH FOOTBALL</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- HEADER (Giữ nguyên từ trang chủ) -->
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <span>TINH FOOTBALL</span>
+                <img src="img/Soccer Ball.svg" alt="Logo" class="logo-icon">
+            </a>
+            <nav class="main-nav">
+                <a href="giay.html">GIÀY ĐÁ BÓNG</a>
+                <a href="phu-kien.html">PHỤ KIỆN</a>
+                <a href="quan-ao.html">QUẦN ÁO</a>
+                <a href="lien-he.html">LIÊN HỆ</a>
+            </nav>
+            <div class="header-actions">
+                 <div class="search-box" style="position: relative;">
+                <input type="text" id="search-input" placeholder="Tìm sản phẩm..." oninput="showLiveResults(this.value)">
+                <div id="live-search-results" class="live-search-dropdown"></div>
+            </div>
+                <div class="user-controls">
+                    <a href="cart.html" class="icon-btn">
+                        <img src="img/image 5.svg" alt="Cart">
+                        <span id="cart-count">0</span>
+                    </a>
+                    <a href="profile.html" class="icon-btn"><img src="img/image 6.svg" alt="User"></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container section-padding">
+        <!-- PHẦN TRÊN: ẢNH VÀ THÔNG TIN MUA HÀNG -->
+        <div class="detail-top-grid">
+            <!-- Bên trái: Ảnh lớn -->
+            <div class="detail-image">
+                <img src="img2/imgnike/n1.png" alt="Nike Zoom Mercurial" id="main-product-img">
+            </div>
+
+            <!-- Bên phải: Thông tin giá, size, nút bấm -->
+            <div class="detail-info">
+                <h1 class="detail-title">NIKE ZOOM MERCURIAL VAPOR 16 ACADEMY TF - FQ8449-300 - VÀNG CHANH/ĐEN</h1>
+                
+                <div class="detail-price-box">
+                    <span class="curr-price">1,890,000₫</span>
+                    <span class="old-price">2,560,000₫</span>
+                    <span class="discount-tag">(Tiết kiệm 670,000₫)</span>
+                </div>
+
+                <div class="size-selector">
+                    <p class="label">Kích Thước</p>
+                    <div class="size-grid">
+                        <button class="size-item" onclick="selectSize(this)">39</button>
+                        <button class="size-item" onclick="selectSize(this)">40</button>
+                        <button class="size-item" onclick="selectSize(this)">40.5</button>
+                        <button class="size-item" onclick="selectSize(this)">41</button>
+                        <button class="size-item" onclick="selectSize(this)">41.5</button>
+                        <button class="size-item" onclick="selectSize(this)">42</button>
+                        <button class="size-item" onclick="selectSize(this)">43</button>
+                    </div>
+                </div>
+
+                <div class="qty-selector">
+                    <p class="label">Số Lượng</p>
+                    <div class="qty-controls">
+                        <button class="qty-btn" onclick="changeQty(-1)">-</button>
+                        <input type="number" id="quantity" value="1" min="1">
+                        <button class="qty-btn" onclick="changeQty(1)">+</button>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn-add-cart" onclick="addToCart()">Thêm vào giỏ hàng</button>
+                    <button class="btn-buy-now" onclick="buyNow()">MUA NGAY</button>
+                </div>
+            </div>
+        </div>
+
+        <hr class="divider">
+        <div class="detail-bottom-content">
+            <section class="description">
+                <h2>MÔ TẢ SẢN PHẨM</h2>
+                <h3>NIKE ZOOM MERCURIAL VAPOR 16 ACADEMY TF - MAX VOLTAGE PACK (10.2025)</h3>
+                <p>- Tăng tốc trong luồng điện áp – Chạm đến tốc độ đỉnh cao</p>
+                <p>- Nike Zoom Mercurial Vapor 16 Academy TF là mẫu giày đinh dăm cỏ nhân tạo thuộc phân khúc phổ thông trong đại gia đình Mercurial...</p>
+                <p>- Upper bằng Flyknit tổng hợp kết hợp lớp phủ NIKESKIN mỏng, mang đến cảm giác tiếp bóng thật chân và độ ôm vừa vặn.</p>
+                <p>- Đế giữa tích hợp Zoom Air thế hệ mới cho phản hồi lực nhanh và giảm chấn hiệu quả khi bứt tốc.</p>
+            </section>
+
+            <section class="policy">
+                <h2>CHÍNH SÁCH BẢO HÀNH</h2>
+                <h3>1. Thời hạn bảo hành</h3>
+                <p>TINH FOOTBALL hỗ trợ bảo hành sửa chữa miễn phí trong vòng 6 tháng đối với các sản phẩm do chính TINH FOOTBALL phân phối.</p>
+                <h3>2. Trường hợp được bảo hành miễn phí</h3>
+                <ul>
+                    <li>Hở keo</li>
+                    <li>Đứt chỉ</li>
+                    <li>Các lỗi kỹ thuật tương tự phát sinh từ phía nhà sản xuất</li>
+                </ul>
+                <h3>3. Thông tin cần có để được hỗ trợ bảo hành</h3>
+                <p>- Hóa đơn mua hàng</p>
+                <p>- Dữ liệu đơn hàng trên hệ thống</p>
+                <p>- Thông tin kích hoạt bảo hành của shop</p>
+            </section>
+        </div>
+    </main>
+    <footer class="main-footer" style="background-image: url('img/footer.png');">
+        <div class="footer-overlay">
+            <div class="container footer-flex">
+                <div class="footer-left">
+                    <h2>TINH FOOTBALL</h2>
+                    <p>ĐỒNG HÀNH CÙNG BẠN TRÊN MỌI MẶT SÂN CỎ</p>
+                </div>
+                <div class="footer-right">
+                    <div class="f-col">
+                        <h3>Hotline</h3>
+                        <a href="tel:0362547895" class="footer-link">0362547895</a>
+                        <a href="chinh-sach.html" class="footer-link">Chính sách mua hàng</a>
+                    </div>
+                    <div class="f-col">
+                        <a href="cham-soc.html" class="footer-link">Chăm sóc hỗ trợ</a>
+                        <p class="footer-text-only">Hỗ trợ đổi trả</p>
+                        <a href="#" class="footer-link">Địa chỉ: 180 Cao Lỗ, P4, Q8</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">© 2026 TINH FOOTBALL. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="js/js1"></script>
+</body>
+</html>

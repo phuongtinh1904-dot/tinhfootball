@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ỐP BẢO VỆ ỐNG CHÂN TIRO LEAGUE - TINH FOOTBALL</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <span>TINH FOOTBALL</span>
+                <img src="img/Soccer Ball.svg" alt="Logo" class="logo-icon">
+            </a>
+            
+            <nav class="main-nav">
+                <a href="giay.html">GIÀY ĐÁ BÓNG</a>
+                <a href="phu-kien.html">PHỤ KIỆN</a>
+                <a href="quan-ao.html">QUẦN ÁO</a>
+                <a href="lien-he.html">LIÊN HỆ</a>
+            </nav>
+
+            <div class="header-actions">
+                 <div class="search-box" style="position: relative;">
+                <input type="text" id="search-input" placeholder="Tìm sản phẩm..." oninput="showLiveResults(this.value)">
+                <div id="live-search-results" class="live-search-dropdown"></div>
+            </div>
+                <div class="user-controls">
+                    <a href="cart.html" class="icon-btn">
+                        <img src="img/image 5.svg" alt="Cart">
+                        <span id="cart-count">0</span>
+                    </a>
+                    <a href="profile.html" class="icon-btn">
+                        <img src="img/image 6.svg" alt="User">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container section-padding">
+        <div class="detail-top-grid">
+            <div class="detail-image">
+                <img src="img2/imgphukien/pk2.png" alt="Ốp ống chân Tiro League" id="main-product-img">
+            </div>
+
+            <div class="detail-info">
+                <h1 class="detail-title">ỐP BẢO VỆ ỐNG CHÂN TIRO LEAGUE</h1>
+                
+                <div class="detail-price-box">
+                    <span class="curr-price">650,000₫</span>
+                </div>
+
+                <div class="size-selector">
+                    <span class="label">Kích Thước (Size)</span>
+                    <div class="size-grid">
+                        <button class="size-item" onclick="selectSize(this)">S</button>
+                        <button class="size-item" onclick="selectSize(this)">M</button>
+                        <button class="size-item" onclick="selectSize(this)">L</button>
+                    </div>
+                </div>
+
+                <div class="qty-selector">
+                    <span class="label">Số Lượng</span>
+                    <div class="qty-controls">
+                        <button class="qty-btn" onclick="changeQty(-1)">-</button>
+                        <input type="number" id="quantity" value="1" min="1">
+                        <button class="qty-btn" onclick="changeQty(1)">+</button>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn-add-cart" onclick="addToCart()">Thêm vào giỏ hàng</button>
+                    <button class="btn-buy-now" onclick="buyNow()">MUA NGAY</button>
+                </div>
+            </div>
+        </div>
+
+        <hr class="divider">
+        <div class="detail-bottom-content">
+            <section class="description">
+                <h2>MÔ TẢ SẢN PHẨM</h2>
+                <p><strong>Ốp bảo vệ ống chân Tiro League</strong> sở hữu thiết kế giải phẫu và ống nén đi kèm, mang lại độ vừa vặn chắc chắn và an toàn tuyệt đối cho ống đồng của bạn.</p>
+                <p>Bước vào kỷ nguyên bóng đá mới cùng Tiro League. Thiết kế dành cho những cầu thủ luôn đẩy cao nhịp độ trận đấu, mẫu ốp này kết hợp khả năng bảo vệ nhẹ nhàng với độ ôm chắc chắn, giúp bạn tự tin tập trung hoàn toàn vào từng đường bóng.</p>
+                
+                <h3 style="margin-top: 20px;">Đặc điểm nổi bật</h3>
+                <ul>
+                    <li><strong>Thiết kế giải phẫu:</strong> Ốp bảo vệ áp sát theo cấu trúc cẳng chân, giảm ma sát và hỗ trợ chuyển động tự nhiên linh hoạt nhất.</li>
+                    <li><strong>Ốp chắn nhựa K-Resin:</strong> Chất liệu cứng cáp mang đến khả năng bảo vệ đáng tin cậy trước những pha va chạm mạnh.</li>
+                    <li><strong>Lớp lót EVA cắt gọn:</strong> Giúp giảm trọng lượng tổng thể và tăng độ êm ái cho sự thoải mái lâu dài trong suốt trận đấu.</li>
+                    <li><strong>Ống nén đi kèm:</strong> Giữ miếng ốp chắc chắn tại vị trí, không bị xê dịch khi bạn thực hiện những pha bứt tốc hay tranh chấp.</li>
+                </ul>
+            </section>
+            <section class="policy">
+                <h2>CHÍNH SÁCH BẢO HÀNH</h2>
+                
+                <h3>1. Thời hạn bảo hành</h3>
+                <p>TINH FOOTBALL hỗ trợ bảo hành sửa chữa miễn phí trong vòng 6 tháng đối với các sản phẩm phụ kiện do shop phân phối.</p>
+
+                <h3>2. Trường hợp được bảo hành miễn phí</h3>
+                <ul>
+                    <li>Lỗi nứt vỡ do kỹ thuật sản xuất</li>
+                    <li>Lỗi đường chỉ hoặc cấu trúc ống nén</li>
+                    <li>Các lỗi khác từ phía nhà sản xuất</li>
+                </ul>
+
+                <h3>3. Thông tin cần có để được hỗ trợ bảo hành</h3>
+                <p>- Hóa đơn mua hàng tại shop</p>
+                <p>- Thông tin đơn hàng trên hệ thống website TINH FOOTBALL</p>
+            </section>
+        </div>
+    </main>
+    <footer class="main-footer" style="background-image: url('img/footer.png');">
+        <div class="footer-overlay">
+            <div class="container footer-flex">
+                <div class="footer-left">
+                    <h2>TINH FOOTBALL</h2>
+                    <p>ĐỒNG HÀNH CÙNG BẠN TRÊN MỌI MẶT SÂN CỎ</p>
+                </div>
+                <div class="footer-right">
+                    <div class="f-col">
+                        <h3>Hotline</h3>
+                        <a href="tel:0362547895" class="footer-link">0362547895</a>
+                        <a href="chinh-sach.html" class="footer-link">Chính sách mua hàng</a>
+                    </div>
+                    <div class="f-col">
+                        <a href="cham-soc.html" class="footer-link">Chăm sóc hỗ trợ</a>
+                        <p class="footer-text-only">Hỗ trợ đổi trả</p>
+                        <a href="#" class="footer-link">Địa chỉ: 180 Cao Lỗ, P4, Q8</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">© 2026 TINH FOOTBALL. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="js/js1"></script>
+</body>
+</html>

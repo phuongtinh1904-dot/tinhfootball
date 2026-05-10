@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIKE TIEMPO LEGEND 10 - TINH FOOTBALL</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <span>TINH FOOTBALL</span>
+                <img src="img/Soccer Ball.svg" alt="Logo" class="logo-icon">
+            </a>
+            
+            <nav class="main-nav">
+                <a href="giay.html">GIÀY ĐÁ BÓNG</a>
+                <a href="phu-kien.html">PHỤ KIỆN</a>
+                <a href="quan-ao.html">QUẦN ÁO</a>
+                <a href="lien-he.html">LIÊN HỆ</a>
+            </nav>
+
+            <div class="header-actions">
+                 <div class="search-box" style="position: relative;">
+                <input type="text" id="search-input" placeholder="Tìm sản phẩm..." oninput="showLiveResults(this.value)">
+                <div id="live-search-results" class="live-search-dropdown"></div>
+            </div>
+                <div class="user-controls">
+                    <a href="cart.html" class="icon-btn">
+                        <img src="img/image 5.svg" alt="Cart">
+                        <span id="cart-count">0</span>
+                    </a>
+                    <a href="profile.html" class="icon-btn">
+                        <img src="img/image 6.svg" alt="User">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container section-padding">
+        <div class="detail-top-grid">
+            <!-- Ảnh sản phẩm -->
+            <div class="detail-image">
+                <img src="img2/imgnike/n9.png" alt="Nike Tiempo Legend 10 Academy TF" id="main-product-img">
+            </div>
+
+            <!-- Thông tin mua hàng -->
+            <div class="detail-info">
+                <h1 class="detail-title">NIKE TIEMPO LEGEND 10 ACADEMY TF - DV4342-701 - VÀNG CHANH/ĐEN</h1>
+                
+                <div class="detail-price-box">
+                    <span class="curr-price">1,790,000₫</span>
+                    <span class="old-price">2,150,000₫</span>
+                    <span class="discount-tag">(Tiết kiệm 360,000₫)</span>
+                </div>
+
+                <div class="size-selector">
+                    <span class="label">Kích Thước</span>
+                    <div class="size-grid">
+                        <button class="size-item" onclick="selectSize(this)">39</button>
+                        <button class="size-item" onclick="selectSize(this)">40</button>
+                        <button class="size-item" onclick="selectSize(this)">40.5</button>
+                        <button class="size-item" onclick="selectSize(this)">41</button>
+                        <button class="size-item" onclick="selectSize(this)">41.5</button>
+                        <button class="size-item" onclick="selectSize(this)">42</button>
+                        <button class="size-item" onclick="selectSize(this)">43</button>
+                    </div>
+                </div>
+
+                <div class="qty-selector">
+                    <span class="label">Số Lượng</span>
+                    <div class="qty-controls">
+                        <button class="qty-btn" onclick="changeQty(-1)">-</button>
+                        <input type="number" id="quantity" value="1" min="1">
+                        <button class="qty-btn" onclick="changeQty(1)">+</button>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn-add-cart" onclick="addToCart()">Thêm vào giỏ hàng</button>
+                    <button class="btn-buy-now" onclick="buyNow()">MUA NGAY</button>
+                </div>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <!-- MÔ TẢ SẢN PHẨM -->
+        <div class="detail-bottom-content">
+            <section class="description">
+                <h2>MÔ TẢ SẢN PHẨM</h2>
+                <h3>NIKE TIEMPO LEGEND 10 ACADEMY TF - VOLT/BLACK | MAX VOLTAGE PACK</h3>
+                <p>Nằm trong bộ sưu tập <strong>MAX VOLTAGE PACK (10/2025)</strong>, đôi giày mang sắc thái năng lượng điện áp cao với tông vàng chanh rực rỡ. Thế hệ Tiempo 10 đánh dấu bước chuyển mình lớn khi sử dụng chất liệu <strong>FlyTouch Lite</strong> mềm hơn cả da thật, giúp kiểm soát bóng đỉnh cao và chạm bóng chuẩn xác trong từng pha xử lý.</p>
+                
+                <h3 style="margin-top: 20px;">Công nghệ & lợi ích nổi bật</h3>
+                <ul>
+                    <li><strong>Upper FlyTouch Lite:</strong> Da tổng hợp cao cấp siêu mềm, ôm chân mà không bị giãn quá đà theo thời gian.</li>
+                    <li><strong>Micro-dots Control:</strong> Các hạt vi điểm trên bề mặt tăng độ nhạy khi rê, chuyền và dứt điểm trong mọi thời tiết.</li>
+                    <li><strong>Cushioned Insole:</strong> Lót trong êm ái kết hợp đệm EVA nhẹ giúp giảm chấn hiệu quả trên mặt sân nhân tạo cứng.</li>
+                    <li><strong>Lưỡi gà sợi dệt co giãn:</strong> Hỗ trợ xỏ giày dễ dàng và tạo cảm giác chắc chắn cho cổ chân khi di chuyển linh hoạt.</li>
+                    <li><strong>Đế đinh dăm Elip:</strong> Bố trí đinh đa kích thước giúp bám sân ổn định và hỗ trợ xoay trở cực tốt.</li>
+                </ul>
+            </section>
+
+            <!-- CHÍNH SÁCH BẢO HÀNH (Đầy đủ 3 mục) -->
+            <section class="policy">
+                <h2>CHÍNH SÁCH BẢO HÀNH</h2>
+                
+                <h3>1. Thời hạn bảo hành</h3>
+                <p>TINH FOOTBALL hỗ trợ bảo hành sửa chữa miễn phí trong vòng 6 tháng đối với các sản phẩm do chính TINH FOOTBALL phân phối.</p>
+
+                <h3>2. Trường hợp được bảo hành miễn phí</h3>
+                <ul>
+                    <li>Hở keo</li>
+                    <li>Đứt chỉ</li>
+                    <li>Các lỗi kỹ thuật tương tự phát sinh từ phía nhà sản xuất</li>
+                </ul>
+
+                <h3>3. Thông tin cần có để được hỗ trợ bảo hành</h3>
+                <p>- Hóa đơn mua hàng</p>
+                <p>- Dữ liệu đơn hàng trên hệ thống</p>
+                <p>- Thông tin kích hoạt bảo hành của shop</p>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer" style="background-image: url('img/footer.png');">
+        <div class="footer-overlay">
+            <div class="container footer-flex">
+                <div class="footer-left">
+                    <h2>TINH FOOTBALL</h2>
+                    <p>ĐỒNG HÀNH CÙNG BẠN TRÊN MỌI MẶT SÂN CỎ</p>
+                </div>
+                <div class="footer-right">
+                    <div class="f-col">
+                        <h3>Hotline</h3>
+                        <a href="tel:0362547895" class="footer-link">0362547895</a>
+                        <a href="chinh-sach.html" class="footer-link">Chính sách mua hàng</a>
+                    </div>
+                    <div class="f-col">
+                        <a href="cham-soc.html" class="footer-link">Chăm sóc hỗ trợ</a>
+                        <p class="footer-text-only">Hỗ trợ đổi trả</p>
+                        <a href="#" class="footer-link">Địa chỉ: 180 Cao Lỗ, P4, Q8</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">© 2026 TINH FOOTBALL. All rights reserved.</div>
+        </div>
+    </footer>
+    <script src="js/js1"></script>
+</body>
+</html>

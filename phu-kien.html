@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TINH FOOTBALL - Full Giao Diện Hoàn Chỉnh</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <span>TINH FOOTBALL</span>
+                <img src="img/Soccer Ball.svg" alt="Logo" class="logo-icon">
+            </a>
+            
+            <nav class="main-nav">
+                <a href="giay.html">GIÀY ĐÁ BÓNG</a>
+                <a href="phu-kien.html">PHỤ KIỆN</a>
+                <a href="quan-ao.html">QUẦN ÁO</a>
+                <a href="lien-he.html">LIÊN HỆ</a>
+            </nav>
+
+            <div class="header-actions">
+                 <div class="search-box" style="position: relative;">
+                <input type="text" id="search-input" placeholder="Tìm sản phẩm..." oninput="showLiveResults(this.value)">
+                <div id="live-search-results" class="live-search-dropdown"></div>
+            </div>
+                <div class="user-controls">
+                    <a href="cart.html" class="icon-btn"><img src="img/image 5.svg" alt="Cart"><span id="cart-count">0</span></a>
+                    <a href="profile.html" class="icon-btn"><img src="img/image 6.svg" alt="User"></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="slideshow-container">
+                <div class="slides-track">
+                    <div class="mySlides">
+                        <img src="img/banner.png" alt="Banner 1">
+                        <div class="banner-text">
+                            <h1>GIÀY BÓNG ĐÁ CHÍNH HÃNG <br> UY TÍN SỐ 1 VIỆT NAM</h1>
+                            <a href="giay.html" class="btn-buy">MUA NGAY</a>
+                        </div>
+                    </div>
+                    <div class="mySlides">
+                        <img src="img/baner2.png" alt="Banner 2">
+                        <div class="banner-text"><h1>NIKE MERCURIAL</h1><a href="nike.html" class="btn-buy">MUA NGAY</a></div>
+                    </div>
+                    <div class="mySlides">
+                        <img src="img/banner3.png" alt="Banner 3">
+                        <div class="banner-text"><h1>ADIDAS PREDATOR</h1><a href="adidas.html" class="btn-buy">MUA NGAY</a></div>
+                    </div>
+                    <div class="mySlides">
+                        <img src="img/banner1.png" alt="Banner 4">
+                        <div class="banner-text"><h1>PUMA FUTURE</h1><a href="puma.html" class="btn-buy">MUA NGAY</a></div>
+                    </div>
+                    <div class="mySlides">
+                        <img src="img/banner5.png" alt="Banner 5">
+                        <div class="banner-text"><h1>QUẦN ÁO MỚI NHẤT</h1><a href="quan-ao.html" class="btn-buy">MUA NGAY</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container section-padding">
+        <a href="" class="brand-link">Phụ Kiện</a>
+        <div class="product-grid">
+            <a href="phukien1.html" class="p-card">
+                <div class="p-img"><img src="img2/imgphukien/1.png" alt="Phu Kien 1"></div>
+                <div class="p-info"><p class="p-title">GĂNG TAY TẬP LUYỆN THỦ MÔN PREDATOR</p><p class="p-price">890,000VNĐ</p></div>
+            </a>
+            <a href="phukien2.html" class="p-card">
+                <div class="p-img"><img src="img2/imgphukien/2.png" alt="Phu Kien 2"></div>
+                <div class="p-info"><p class="p-title">ỐP BẢO VỆ ỐNG CHÂN TIRO LEAGUE</p><p class="p-price">650,000VNĐ</p></div>
+            </a>
+            <a href="phukien3.html" class="p-card">
+                <div class="p-img"><img src="img2/imgphukien/3.png" alt="Phu Kien 3"></div>
+                <div class="p-info"><p class="p-title">BALO LIVERPOOL FC</p><p class="p-price">900,000VNĐ</p></div>
+            </a>
+            <a href="phukien4.html" class="p-card">
+                <div class="p-img"><img src="img2/imgphukien/4.png" alt="Phu Kien 4"></div>
+                <div class="p-info"><p class="p-title">TẤT MILANO 23</p><p class="p-price">350,000VNĐ</p></div>
+            </a>
+        </div>
+    </section>
+
+    <section class="container section-padding">
+        <a href="" class="brand-link">Phụ Kiện</a>
+        <div class="product-grid">
+            <a href="phukien5.html" class="p-card">
+                <div class="p-img"><img src="img2/imgphukien/5.png" alt="Phu Kien 5"></div>
+                <div class="p-info"><p class="p-title">BÓNG PRO UEFA CHAMPIONS LEAGUE FINAL</p><p class="p-price">3,350,000VNĐ</p></div>
+            </a>
+            <a href="phukien6.html" class="p-card">
+                <div class="p-img"><img src="img2/imgphukien/6.png" alt="Phu Kien 6"></div>
+                <div class="p-info"><p class="p-title">Bóng Trionda Club FIFA World Cup</p><p class="p-price">650,000VNĐ</p></div>
+            </a>
+            <a href="phukien7.html" class="p-card">
+                <div class="p-img"><img src="img2/imgphukien/7.png" alt="Phu Kien 7"></div>
+                <div class="p-info"><p class="p-title">Bóng UEFA Champions League Final</p><p class="p-price">650,000VNĐ</p></div>
+            </a>
+            <a href="phukien8.html" class="p-card">
+                <div class="p-img"><img src="img2/imgphukien/8.png" alt="Phu Kien 8"></div>
+                <div class="p-info"><p class="p-title">Bóng Tập Luyện Trionda FIFA World Cup</p><p class="p-price">650,000VNĐ</p></div>
+            </a>
+        </div>
+    </section>
+    <footer class="main-footer" style="background-image: url('img/footer.png');">
+        <div class="footer-overlay">
+            <div class="container footer-flex">
+                <div class="footer-left">
+                    <h2>TINH FOOTBALL</h2>
+                    <p>ĐỒNG HÀNH CÙNG BẠN TRÊN MỌI MẶT SÂN CỎ</p>
+                </div>
+                <div class="footer-right">
+                    <div class="f-col">
+                        <h3>Hotline</h3>
+                        <a href="tel:0362547895" class="footer-link red-bold">0362547895</a>
+                        <a href="chinh-sach.html" class="footer-link">Chính sách mua hàng</a>
+                    </div>
+                    <div class="f-col">
+                        <a href="cham-soc.html" class="footer-link">Chăm sóc hỗ trợ</a>
+                        <p class="footer-text-only">Hỗ trợ đổi trả</p>
+                        <a href="http://googleusercontent.com/maps.google.com/4" target="_blank" class="footer-link">Địa chỉ: 180 Cao Lỗ, P4, Q8</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">© 2026 TINH FOOTBALL. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="js/js1"></script>
+</body>
+</html>

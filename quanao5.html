@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ÁO ĐẤU Ý 26 AUTHENTIC - TINH FOOTBALL</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <span>TINH FOOTBALL</span>
+                <img src="img/Soccer Ball.svg" alt="Logo" class="logo-icon">
+            </a>
+            
+            <nav class="main-nav">
+                <a href="giay.html">GIÀY ĐÁ BÓNG</a>
+                <a href="phu-kien.html">PHỤ KIỆN</a>
+                <a href="quan-ao.html">QUẦN ÁO</a>
+                <a href="lien-he.html">LIÊN HỆ</a>
+            </nav>
+
+            <div class="header-actions">
+                <div class="search-box" style="position: relative;">
+                <input type="text" id="search-input" placeholder="Tìm sản phẩm..." oninput="showLiveResults(this.value)">
+                <div id="live-search-results" class="live-search-dropdown"></div>
+            </div>
+                <div class="user-controls">
+                    <a href="cart.html" class="icon-btn">
+                        <img src="img/image 5.svg" alt="Cart">
+                        <span id="cart-count">0</span>
+                    </a>
+                    <a href="profile.html" class="icon-btn">
+                        <img src="img/image 6.svg" alt="User">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container section-padding">
+        <div class="detail-top-grid">
+            <div class="detail-image">
+                <img src="img2/imgquanao/qa5.png" alt="Áo đấu Ý 26 Authentic" id="main-product-img">
+            </div>
+
+            <div class="detail-info">
+                <h1 class="detail-title">ÁO ĐẤU SÂN KHÁCH ĐỘI TUYỂN Ý 26 PHIÊN BẢN AUTHENTIC</h1>
+                
+                <div class="detail-price-box">
+                    <span class="curr-price">3,350,000₫</span>
+                </div>
+
+                <div class="size-selector">
+                    <span class="label">Kích Thước</span>
+                    <div class="size-grid">
+                        <button class="size-item" onclick="selectSize(this)">S</button>
+                        <button class="size-item" onclick="selectSize(this)">M</button>
+                        <button class="size-item" onclick="selectSize(this)">L</button>
+                        <button class="size-item" onclick="selectSize(this)">XL</button>
+                        <button class="size-item" onclick="selectSize(this)">XXL</button>
+                    </div>
+                </div>
+
+                <div class="qty-selector">
+                    <span class="label">Số Lượng</span>
+                    <div class="qty-controls">
+                        <button class="qty-btn" onclick="changeQty(-1)">-</button>
+                        <input type="number" id="quantity" value="1" min="1">
+                        <button class="qty-btn" onclick="changeQty(1)">+</button>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn-add-cart" onclick="addToCart()">Thêm vào giỏ hàng</button>
+                    <button class="btn-buy-now" onclick="buyNow()">MUA NGAY</button>
+                </div>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="detail-bottom-content">
+            <section class="description">
+                <h2>MÔ TẢ SẢN PHẨM</h2>
+                <p><strong>Áo đấu dáng ôm</strong> với công nghệ <strong>Climacool+</strong> tiên tiến, giúp bạn luôn duy trì trạng thái khô ráo và mát mẻ trong mọi trận đấu căng thẳng.</p>
+                <p>Áo Đấu Sân Khách Đội Tuyển Ý 26 Phiên Bản Authentic là sự kết hợp hài hòa giữa giá trị di sản và tinh thần đổi mới. Thiết kế tôn vinh nền bóng đá Ý với những đường nét lấy cảm hứng từ những bộ suit lịch lãm, thường được các cầu thủ khoác lên trong những khoảnh khắc ăn mừng chiến thắng rực rỡ.</p>
+                
+                <h3 style="margin-top: 20px;">Đặc điểm nổi bật & Công nghệ</h3>
+                <ul>
+                    <li><strong>Công nghệ Climacool+:</strong> Hỗ trợ thấm hút và phân tán mồ hôi hiệu quả, giúp hạ nhiệt cơ thể nhanh chóng khi nhịp độ trận đấu tăng cao.</li>
+                    <li><strong>Thiết kế dáng ôm (Slim Fit):</strong> Hỗ trợ chuyển động tự nhiên của cơ thể, mang lại sự thoải mái trọn vẹn và tối ưu hóa hiệu suất thi đấu chuyên nghiệp.</li>
+                    <li><strong>Chi tiết in chuyển nhiệt:</strong> Logo adidas, huy hiệu liên đoàn và dải 3 Gạch được xử lý tinh xảo, giảm trọng lượng áo và hạn chế ma sát với da.</li>
+                    <li><strong>Phong cách Italia:</strong> Thể hiện niềm tự hào và sự tự tin của sắc áo Thiên thanh cả trên sân cỏ lẫn trong phong cách thời trang thường ngày.</li>
+                </ul>
+            </section>
+
+            <section class="policy">
+                <h2>CHÍNH SÁCH BẢO HÀNH</h2>
+                
+                <h3>1. Thời hạn bảo hành</h3>
+                <p>TINH FOOTBALL hỗ trợ bảo hành sửa chữa hoặc đổi mới lỗi kỹ thuật trong vòng 3 tháng kể từ ngày nhận hàng.</p>
+
+                <h3>2. Trường hợp được hỗ trợ bảo hành</h3>
+                <ul>
+                    <li>Lỗi bong tróc logo hoặc nhãn ép nhiệt khi vừa sử dụng</li>
+                    <li>Lỗi đường chỉ may hoặc vải bị tưa khi sản phẩm còn mới</li>
+                    <li>Giao sai màu sắc, phom dáng hoặc kích cỡ đã đặt</li>
+                </ul>
+
+                <h3>3. Thông tin cần có để được hỗ trợ bảo hành</h3>
+                <p>- Hóa đơn mua hàng hoặc mã đơn hàng trên hệ thống</p>
+                <p>- Sản phẩm phải còn nguyên tem mác chính hãng (đối với trường hợp đổi mới)</p>
+                <p>- Thông tin tài khoản khách hàng trên hệ thống TINH FOOTBALL</p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer" style="background-image: url('img/footer.png');">
+        <div class="footer-overlay">
+            <div class="container footer-flex">
+                <div class="footer-left">
+                    <h2>TINH FOOTBALL</h2>
+                    <p>ĐỒNG HÀNH CÙNG BẠN TRÊN MỌI MẶT SÂN CỎ</p>
+                </div>
+                <div class="footer-right">
+                    <div class="f-col">
+                        <h3>Hotline</h3>
+                        <a href="tel:0362547895" class="footer-link">0362547895</a>
+                        <a href="chinh-sach.html" class="footer-link">Chính sách mua hàng</a>
+                    </div>
+                    <div class="f-col">
+                        <a href="cham-soc.html" class="footer-link">Chăm sóc hỗ trợ</a>
+                        <p class="footer-text-only">Hỗ trợ đổi trả</p>
+                        <a href="#" class="footer-link">Địa chỉ: 180 Cao Lỗ, P4, Q8</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">© 2026 TINH FOOTBALL. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="js/js1"></script>
+</body>
+</html>

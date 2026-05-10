@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BÓNG TRIONDA CLUB FIFA WORLD CUP 26™ - TINH FOOTBALL</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <span>TINH FOOTBALL</span>
+                <img src="img/Soccer Ball.svg" alt="Logo" class="logo-icon">
+            </a>
+            
+            <nav class="main-nav">
+                <a href="giay.html">GIÀY ĐÁ BÓNG</a>
+                <a href="phu-kien.html">PHỤ KIỆN</a>
+                <a href="quan-ao.html">QUẦN ÁO</a>
+                <a href="lien-he.html">LIÊN HỆ</a>
+            </nav>
+
+            <div class="header-actions">
+                 <div class="search-box" style="position: relative;">
+                <input type="text" id="search-input" placeholder="Tìm sản phẩm..." oninput="showLiveResults(this.value)">
+                <div id="live-search-results" class="live-search-dropdown"></div>
+            </div>
+                <div class="user-controls">
+                    <a href="cart.html" class="icon-btn">
+                        <img src="img/image 5.svg" alt="Cart">
+                        <span id="cart-count">0</span>
+                    </a>
+                    <a href="profile.html" class="icon-btn">
+                        <img src="img/image 6.svg" alt="User">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container section-padding">
+        <div class="detail-top-grid">
+            <div class="detail-image">
+                <img src="img2/imgphukien/pk6.png" alt="Bóng World Cup 26 Club" id="main-product-img">
+            </div>
+
+            <div class="detail-info">
+                <h1 class="detail-title">BÓNG TRIONDA CLUB FIFA WORLD CUP 26™</h1>
+                
+                <div class="detail-price-box">
+                    <span class="curr-price">650,000₫</span>
+                </div>
+
+                <div class="size-selector">
+                    <span class="label">Kích Thước</span>
+                    <div class="size-grid">
+                        <button class="size-item" onclick="selectSize(this)">Size 5</button>
+                    </div>
+                </div>
+
+                <div class="qty-selector">
+                    <span class="label">Số Lượng</span>
+                    <div class="qty-controls">
+                        <button class="qty-btn" onclick="changeQty(-1)">-</button>
+                        <input type="number" id="quantity" value="1" min="1">
+                        <button class="qty-btn" onclick="changeQty(1)">+</button>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn-add-cart" onclick="addToCart()">Thêm vào giỏ hàng</button>
+                    <button class="btn-buy-now" onclick="buyNow()">MUA NGAY</button>
+                </div>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="detail-bottom-content">
+            <section class="description">
+                <h2>MÔ TẢ SẢN PHẨM</h2>
+                <p>Thể hiện đẳng cấp của bạn trên sân cỏ cùng <strong>Bóng Trionda Club FIFA World Cup 26™</strong>. Đây là quả bóng được thiết kế đặc biệt để chịu được cường độ thi đấu và tập luyện thường xuyên, mang lại cảm hứng chiến thắng từ giải đấu lớn nhất hành tinh.</p>
+                <p>Dù bạn đang tham gia một trận giao hữu hay thực hiện những bài tập nâng cao kỹ năng, quả bóng này hứa hẹn sẽ mang lại trải nghiệm chơi bóng tuyệt vời với độ bền vượt trội và thiết kế bắt mắt mang đậm tinh thần World Cup 2026.</p>
+                
+                <h3 style="margin-top: 20px;">Thông số và Tính năng nổi bật</h3>
+                <ul>
+                    <li><strong>Cấu trúc may máy (Machine-stitched):</strong> Đảm bảo các đường may chắc chắn, mang lại cảm giác bóng mềm mại và độ bền cực cao trong suốt quá trình sử dụng.</li>
+                    <li><strong>Ruột bóng bằng cao su Butyl:</strong> Khả năng giữ hơi xuất sắc, giúp quả bóng luôn căng tròn và ổn định áp suất, sẵn sàng cho mọi trận đấu mà không cần bơm thường xuyên.</li>
+                    <li><strong>Thiết kế FIFA World Cup 26™:</strong> Họa tiết độc đáo truyền cảm hứng, thể hiện sự kết nối và đam mê nhiệt huyết với môn thể thao vua.</li>
+                    <li><strong>Đa năng:</strong> Lựa chọn lý tưởng cho các trận bóng đá giải trí, tập luyện nhóm hoặc làm quà tặng cho người hâm mộ bóng đá.</li>
+                </ul>
+            </section>
+
+            <section class="policy">
+                <h2>CHÍNH SÁCH BẢO HÀNH</h2>
+                
+                <h3>1. Thời hạn bảo hành</h3>
+                <p>TINH FOOTBALL hỗ trợ bảo hành lỗi kỹ thuật trong vòng 3 tháng kể từ ngày mua hàng.</p>
+
+                <h3>2. Trường hợp được bảo hành miễn phí</h3>
+                <ul>
+                    <li>Bóng bị xì hơi do lỗi van hoặc mối hàn nhiệt</li>
+                    <li>Bóng bị méo, không giữ được dáng tròn chuẩn</li>
+                    <li>Bong tróc lớp vỏ khi chưa qua sử dụng cường độ quá cao</li>
+                </ul>
+
+                <h3>3. Thông tin hỗ trợ</h3>
+                <p>- Hóa đơn mua hàng tại hệ thống TINH FOOTBALL</p>
+                <p>- Sản phẩm không có dấu hiệu bị vật sắc nhọn tác động</p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer" style="background-image: url('img/footer.png');">
+        <div class="footer-overlay">
+            <div class="container footer-flex">
+                <div class="footer-left">
+                    <h2>TINH FOOTBALL</h2>
+                    <p>ĐỒNG HÀNH CÙNG BẠN TRÊN MỌI MẶT SÂN CỎ</p>
+                </div>
+                <div class="footer-right">
+                    <div class="f-col">
+                        <h3>Hotline</h3>
+                        <a href="tel:0362547895" class="footer-link">0362547895</a>
+                        <a href="chinh-sach.html" class="footer-link">Chính sách mua hàng</a>
+                    </div>
+                    <div class="f-col">
+                        <a href="cham-soc.html" class="footer-link">Chăm sóc hỗ trợ</a>
+                        <p class="footer-text-only">Hỗ trợ đổi trả</p>
+                        <a href="#" class="footer-link">Địa chỉ: 180 Cao Lỗ, P4, Q8</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">© 2026 TINH FOOTBALL. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="js/js1"></script>
+</body>
+</html>

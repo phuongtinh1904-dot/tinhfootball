@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TINH FOOTBALL - Full Giao Diện Hoàn Chỉnh</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <span>TINH FOOTBALL</span>
+                <img src="img/Soccer Ball.svg" alt="Logo" class="logo-icon">
+            </a>
+            
+            <nav class="main-nav">
+                <a href="giay.html">GIÀY ĐÁ BÓNG</a>
+                <a href="phu-kien.html">PHỤ KIỆN</a>
+                <a href="quan-ao.html">QUẦN ÁO</a>
+                <a href="lien-he.html">LIÊN HỆ</a>
+            </nav>
+
+            <div class="header-actions">
+                 <div class="search-box" style="position: relative;">
+                <input type="text" id="search-input" placeholder="Tìm sản phẩm..." oninput="showLiveResults(this.value)">
+                <div id="live-search-results" class="live-search-dropdown"></div>
+            </div>
+                <div class="user-controls">
+                    <a href="cart.html" class="icon-btn"><img src="img/image 5.svg" alt="Cart"><span id="cart-count">0</span></a>
+                    <a href="profile.html" class="icon-btn"><img src="img/image 6.svg" alt="User"></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="slideshow-container">
+                <div class="slides-track">
+                    <div class="mySlides">
+                        <img src="img/banner.png" alt="Banner 1">
+                        <div class="banner-text">
+                            <h1>GIÀY BÓNG ĐÁ CHÍNH HÃNG <br> UY TÍN SỐ 1 VIỆT NAM</h1>
+                            <a href="giay.html" class="btn-buy">MUA NGAY</a>
+                        </div>
+                    </div>
+                    <div class="mySlides">
+                        <img src="img/baner2.png" alt="Banner 2">
+                        <div class="banner-text"><h1>NIKE MERCURIAL</h1><a href="nike.html" class="btn-buy">MUA NGAY</a></div>
+                    </div>
+                    <div class="mySlides">
+                        <img src="img/banner3.png" alt="Banner 3">
+                        <div class="banner-text"><h1>ADIDAS PREDATOR</h1><a href="adidas.html" class="btn-buy">MUA NGAY</a></div>
+                    </div>
+                    <div class="mySlides">
+                        <img src="img/banner1.png" alt="Banner 4">
+                        <div class="banner-text"><h1>PUMA FUTURE</h1><a href="puma.html" class="btn-buy">MUA NGAY</a></div>
+                    </div>
+                    <div class="mySlides">
+                        <img src="img/banner5.png" alt="Banner 5">
+                        <div class="banner-text"><h1>QUẦN ÁO MỚI NHẤT</h1><a href="quan-ao.html" class="btn-buy">MUA NGAY</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container section-padding">
+        <a href="nike.html" class="brand-link">NIKE</a>
+        <div class="product-grid">
+            <a href="nike1.html" class="p-card">
+                <div class="p-img"><img src="img/nike1.png" alt="Nike 1"></div>
+                <div class="p-info"><p class="p-title">NIKE ZOOM MERCURIAL VAPOR 16</p><p class="p-price">1,890,000VNĐ</p></div>
+            </a>
+            <a href="nike2.html" class="p-card">
+                <div class="p-img"><img src="img/nike2.png" alt="Nike 2"></div>
+                <div class="p-info"><p class="p-title">NIKE TIEMPO LEGEND 10</p><p class="p-price">1,750,000VNĐ</p></div>
+            </a>
+            <a href="nike3.html" class="p-card">
+                <div class="p-img"><img src="img/nike3.png" alt="Nike 3"></div>
+                <div class="p-info"><p class="p-title">NIKE PHANTOM GX 2</p><p class="p-price">1,850,000VNĐ</p></div>
+            </a>
+            <a href="nike4.html" class="p-card">
+                <div class="p-img"><img src="img/nike4.png" alt="Nike 4"></div>
+                <div class="p-info"><p class="p-title">NIKE TIEMPO MAESTRO</p><p class="p-price">2,150,000VNĐ</p></div>
+            </a>
+        </div>
+    </section>
+
+    <section class="container section-padding">
+        <a href="adidas.html" class="brand-link">ADIDAS</a>
+        <div class="product-grid">
+            <a href="adidas1.html" class="p-card">
+                <div class="p-img"><img src="img/adidas1.png" alt="Adidas 1"></div>
+                <div class="p-info"><p class="p-title">ADIDAS PREDATOR 26 LEAGUE</p><p class="p-price">2,050,000VNĐ</p></div>
+            </a>
+            <a href="adidas2.html" class="p-card">
+                <div class="p-img"><img src="img/adidas2.png" alt="Adidas 2"></div>
+                <div class="p-info"><p class="p-title">ADIDAS COPA PURE 3</p><p class="p-price">1,950,000VNĐ</p></div>
+            </a>
+            <a href="adidas3.html" class="p-card">
+                <div class="p-img"><img src="img/adidas3.png" alt="Adidas 3"></div>
+                <div class="p-info"><p class="p-title">ADIDAS X CRAZYFAST MESSI.3</p><p class="p-price">3,850,000VNĐ</p></div>
+            </a>
+            <a href="adidas4.html" class="p-card">
+                <div class="p-img"><img src="img/adidas4.png" alt="Adidas 4"></div>
+                <div class="p-info"><p class="p-title">ADIDAS F50 MESSI LEAGUE</p><p class="p-price">3,850,000VNĐ</p></div>
+            </a>
+        </div>
+    </section>
+
+    <section class="container section-padding">
+        <a href="puma.html" class="brand-link">PUMA</a>
+        <div class="product-grid">
+            <a href="puma1.html" class="p-card">
+                <div class="p-img"><img src="img/puma1.png" alt="Puma 1"></div>
+                <div class="p-info"><p class="p-title">PUMA FUTURE 8 PRO CAGE</p><p class="p-price">2,700,000VNĐ</p></div>
+            </a>
+            <a href="puma2.html" class="p-card">
+                <div class="p-img"><img src="img/puma2.png" alt="Puma 2"></div>
+                <div class="p-info"><p class="p-title">PUMA ULTRA 6 MATCH RE-CHARGE</p><p class="p-price">1,790,000VNĐ</p></div>
+            </a>
+            <a href="puma3.html" class="p-card">
+                <div class="p-img"><img src="img/puma3.png" alt="Puma 3"></div>
+                <div class="p-info"><p class="p-title">PUMA KING 20 PRO CAGE</p><p class="p-price">3,850,000VNĐ</p></div>
+            </a>
+            <a href="puma4.html" class="p-card">
+                <div class="p-img"><img src="img/puma4.png" alt="Puma 4"></div>
+                <div class="p-info"><p class="p-title">PUMA FUTURE 9 MATCH</p><p class="p-price">1,850,000VNĐ</p></div>
+            </a>
+        </div>
+    </section>
+    <section class="container section-padding">
+        <a href="" class="brand-link">JOMA</a>
+        <div class="product-grid">
+            <a href="joma1.html" class="p-card">
+                <div class="p-img"><img src="img2/imgjoma/1.png" alt="Joma 1"></div>
+                <div class="p-info"><p class="p-title">JOMA MUNDIAL TF 2502</p><p class="p-price">1,700,000VNĐ</p></div>
+            </a>
+            <a href="joma2.html" class="p-card">
+                <div class="p-img"><img src="img2/imgjoma/2.png" alt="Joma 2"></div>
+                <div class="p-info"><p class="p-title">JOMA FS REACTIVE TF 2402</p><p class="p-price">1,850,000VNĐ</p></div>
+            </a>
+            <a href="joma3.html" class="p-card">
+                <div class="p-img"><img src="img2/imgjoma/3.png" alt="Joma 3"></div>
+                <div class="p-info"><p class="p-title">JOMA FS REACTIVE TF 2432</p><p class="p-price">1,850,000VNĐ</p></div>
+            </a>
+            <a href="joma4.html" class="p-card">
+                <div class="p-img"><img src="img2/imgjoma/4.png" alt="Joma 4"></div>
+                <div class="p-info"><p class="p-title">JOMA TOP FLEX TF 2502</p><p class="p-price">1,550,000VNĐ</p></div>
+            </a>
+        </div>
+    </section>
+    <section class="container section-padding">
+        <a href="" class="brand-link">MIZUNO</a>
+        <div class="product-grid">
+            <a href="mizuno1.html" class="p-card">
+                <div class="p-img"><img src="img2/imgmizuno/1.png" alt="Mizuno 1"></div>
+                <div class="p-info"><p class="p-title">MIZUNO MORELIA II PRO AS</p><p class="p-price">2,200,000VNĐ</p></div>
+            </a>
+            <a href="mizuno2.html" class="p-card">
+                <div class="p-img"><img src="img2/imgmizuno/2.png" alt="Mizuno 2"></div>
+                <div class="p-info"><p class="p-title">MIZUNO MORELIA SALA JAPAN TF</p><p class="p-price">3,850,000VNĐ</p></div>
+            </a>
+            <a href="mizuno3.html" class="p-card">
+                <div class="p-img"><img src="img2/imgmizuno/3.png" alt="Mizuno 3"></div>
+                <div class="p-info"><p class="p-title">MIZUNO MORELIA NEO IV PRO AS</p><p class="p-price">2,550,000VNĐ</p></div>
+            </a>
+            <a href="mizuno4.html" class="p-card">
+                <div class="p-img"><img src="img2/imgmizuno/4.png" alt="Mizuno 4"></div>
+                <div class="p-info"><p class="p-title">MIZUNO MORELIA SALA JAPAN TF</p><p class="p-price">3,850,000VNĐ</p></div>
+            </a>
+        </div>
+    </section>
+    <footer class="main-footer" style="background-image: url('img/footer.png');">
+        <div class="footer-overlay">
+            <div class="container footer-flex">
+                <div class="footer-left">
+                    <h2>TINH FOOTBALL</h2>
+                    <p>ĐỒNG HÀNH CÙNG BẠN TRÊN MỌI MẶT SÂN CỎ</p>
+                </div>
+                <div class="footer-right">
+                    <div class="f-col">
+                        <h3>Hotline</h3>
+                        <a href="tel:0362547895" class="footer-link red-bold">0362547895</a>
+                        <a href="chinh-sach.html" class="footer-link">Chính sách mua hàng</a>
+                    </div>
+                    <div class="f-col">
+                        <a href="cham-soc.html" class="footer-link">Chăm sóc hỗ trợ</a>
+                        <p class="footer-text-only">Hỗ trợ đổi trả</p>
+                        <a href="http://googleusercontent.com/maps.google.com/4" target="_blank" class="footer-link">Địa chỉ: 180 Cao Lỗ, P4, Q8</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">© 2026 TINH FOOTBALL. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="js/js1"></script>
+</body>
+</html>
