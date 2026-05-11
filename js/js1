@@ -253,3 +253,31 @@ document.addEventListener('click', function(e) {
         dropdown.style.display = "none";
     }
 });
+
+
+// HÀM TỰ ĐỘNG HIGHLIGHT MENU
+function activeMenu() {
+    // 1. Lấy tên file hiện tại trên thanh địa chỉ (VD: index.html)
+    const currentPath = window.location.pathname.split("/").pop();
+    
+    // 2. Tìm tất cả các link trong menu
+    const navLinks = document.querySelectorAll(".main-nav a");
+
+    navLinks.forEach(link => {
+        // Lấy tên file trong thuộc tính href của mỗi thẻ <a>
+        const linkPath = link.getAttribute("href");
+
+        // 3. Nếu tên file khớp nhau thì thêm class 'active'
+        if (currentPath === linkPath) {
+            link.classList.add("active");
+        }
+        
+        // Trường hợp đặc biệt: Nếu trang chủ để trống thì mặc định là index.html
+        if (currentPath === "" && linkPath === "index.html") {
+            link.classList.add("active");
+        }
+    });
+}
+
+// Chạy hàm ngay khi trang web vừa tải xong
+document.addEventListener("DOMContentLoaded", activeMenu);

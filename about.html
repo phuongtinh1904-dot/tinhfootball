@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIỚI THIỆU - TINH FOOTBALL</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .about-hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/footer.png');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .about-hero h1 {
+            font-size: 48px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+
+        .about-content {
+            max-width: 1000px;
+            margin: 0 auto 80px;
+            line-height: 1.8;
+            color: #444;
+            font-size: 18px;
+        }
+
+        .about-section {
+            margin-bottom: 60px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 32px;
+            color: #000;
+            margin-bottom: 20px;
+            border-left: 5px solid #ED0006;
+            padding-left: 15px;
+        }
+
+        .about-img img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .value-card {
+            padding: 30px;
+            background: #f9f9f9;
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .value-card h3 {
+            color: #ED0006;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        @media (max-width: 768px) {
+            .about-section { grid-template-columns: 1fr; text-align: center; }
+            .about-text h2 { border-left: none; border-bottom: 3px solid #ED0006; padding: 0 0 10px 0; }
+            .values-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <span>TINH FOOTBALL</span>
+                <img src="img/Soccer Ball.svg" alt="Logo" class="logo-icon">
+            </a>
+            
+            <nav class="main-nav">
+                <a href="about.html">GIỚI THIỆU</a>
+                <a href="giay.html">GIÀY ĐÁ BÓNG</a>
+                <a href="phu-kien.html">PHỤ KIỆN</a>
+                <a href="quan-ao.html">QUẦN ÁO</a>
+                <a href="lien-he.html">LIÊN HỆ</a>
+            </nav>
+
+            <div class="header-actions">
+                <div class="search-box" style="position: relative;">
+                <input type="text" id="search-input" placeholder="Tìm sản phẩm..." oninput="showLiveResults(this.value)">
+                <div id="live-search-results" class="live-search-dropdown"></div>
+            </div>
+                <div class="user-controls">
+                    <a href="cart.html" class="icon-btn">
+                        <img src="img/image 5.svg" alt="Cart">
+                        <span id="cart-count">0</span>
+                    </a>
+                    <a href="profile.html" class="icon-btn">
+                        <img src="img/image 6.svg" alt="User">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="about-hero">
+        <h1>CHÚNG TÔI LÀ AI?</h1>
+    </div>
+
+    <main class="container about-content">
+        <div class="about-section">
+            <div class="about-text">
+                <h2>CÂU CHUYỆN THƯƠNG HIỆU</h2>
+                <p>Ra đời từ niềm đam mê cháy bỏng với môn thể thao vua, **TINH FOOTBALL** không chỉ là một cửa hàng kinh doanh đồ thể thao, mà còn là nơi kết nối những tâm hồn yêu bóng đá. Chúng tôi bắt đầu với một mục tiêu duy nhất: Mang đến cho các cầu thủ phong trào những trang thiết bị chính hãng, chất lượng nhất.</p>
+            </div>
+            <div class="about-img">
+                <img src="img/banner1.png" alt="Store Image">
+            </div>
+        </div>
+
+        <h2 style="text-align:center; font-size: 32px; margin-bottom: 20px;">GIÁ TRỊ CỐT LÕI</h2>
+        <div class="values-grid">
+            <div class="value-card">
+                <h3>CHẤT LƯỢNG</h3>
+                <p>Cam kết 100% sản phẩm chính hãng từ Adidas, Nike, Puma...</p>
+            </div>
+            <div class="value-card">
+                <h3>ĐAM MÊ</h3>
+                <p>Mỗi sản phẩm đều chứa đựng tình yêu dành cho trái bóng tròn.</p>
+            </div>
+            <div class="value-card">
+                <h3>CỘNG ĐỒNG</h3>
+                <p>Đồng hành cùng các giải đấu phong trào và sinh viên.</p>
+            </div>
+        </div>
+
+        <hr style="margin: 60px 0; opacity: 0.1;">
+
+        <div style="text-align: center; background: #000; color: #fff; padding: 50px; border-radius: 20px;">
+            <h2 style="color: #ED0006;">THÔNG TIN DỰ ÁN</h2>
+            <p style="margin: 15px 0;">Đồ án phát triển Website chuyên ngành Công nghệ thông tin</p>
+            <p><strong>Thực hiện bởi:</strong> Nguyễn Phương Tính</p>
+            <p><strong>Lớp:</strong> D23_TH07</p>
+            <p><strong>Trường:</strong> Đại học Công Nghệ Sài Gòn</p>
+        </div>
+    </main>
+
+    <footer class="main-footer" style="background-image: url('img/footer.png');">
+        <div class="footer-overlay">
+            <div class="container footer-flex">
+                <div class="footer-left">
+                    <h2>TINH FOOTBALL</h2>
+                    <p>ĐỒNG HÀNH CÙNG BẠN TRÊN MỌI MẶT SÂN CỎ</p>
+                </div>
+                <div class="footer-right">
+                    <div class="f-col">
+                        <h3>Hotline</h3>
+                        <a href="tel:0362547895" class="footer-link red-bold">0362547895</a>
+                        <a href="chinh-sach.html" class="footer-link">Chính sách mua hàng</a>
+                    </div>
+                    <div class="f-col">
+                        <a href="cham-soc.html" class="footer-link">Chăm sóc hỗ trợ</a>
+                        <p class="footer-text-only">Hỗ trợ đổi trả</p>
+                        <a href="http://googleusercontent.com/maps.google.com/4" target="_blank" class="footer-link">Địa chỉ: 180 Cao Lỗ, P4, Q8</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">© 2026 TINH FOOTBALL. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="js/js1"></script>
+</body>
+</html>

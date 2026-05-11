@@ -514,3 +514,13 @@ input[type="number"] {
         font-size: 18px;
     }
 }
+
+
+/* Khi trang đang được chọn thì chữ đỏ và hiện gạch chân 100% */
+.main-nav a.active {
+    color: #ED0006 !important;
+}
+
+.main-nav a.active::after {
+    width: 100% !important;
+}
