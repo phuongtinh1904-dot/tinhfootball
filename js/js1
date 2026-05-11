@@ -281,3 +281,26 @@ function activeMenu() {
 
 // Chạy hàm ngay khi trang web vừa tải xong
 document.addEventListener("DOMContentLoaded", activeMenu);
+
+
+// 4. ĐIỀU KHIỂN SLIDESHOW (BANNER TỰ ĐỘNG)
+let slideIndex = 0;
+
+function showSlides() {
+    const slides = document.querySelectorAll(".mySlides");
+    const track = document.querySelector(".slides-track");
+    
+    // Nếu không tìm thấy slide (trường hợp ở các trang không phải trang chủ) thì thoát
+    if (!slides.length || !track) return;
+
+    slideIndex++;
+    if (slideIndex >= slides.length) {
+        slideIndex = 0;
+    }
+
+    // Di chuyển thanh chứa ảnh
+    track.style.transform = `translateX(-${slideIndex * 100}%)`;
+}
+
+// Thiết lập 3 giây đổi ảnh 1 lần (3000ms)
+setInterval(showSlides, 3000);
