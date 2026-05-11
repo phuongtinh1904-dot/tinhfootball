@@ -437,54 +437,70 @@ input[type="number"] {
     margin: 0;
 }
 
+/* ==========================================
+   BẢN CHỐT HẠ: FIX MOBILE TOÀN DIỆN (Dưới 768px)
+   ========================================== */
 @media (max-width: 768px) {
-    /* 1. CHỐNG TRÀN & GIỮ KHUNG */
+    /* 1. KHÓA CHẶT TRÀN NGANG (Cực kỳ quan trọng) */
     html, body {
-        overflow-x: hidden !important;
+        overflow-x: hidden !important; /* Tuyệt đối không cho lòi ra ngoài */
         width: 100% !important;
         position: relative;
+        margin: 0;
+        padding: 0;
     }
 
-    .container {
-        width: 95% !important;
-        max-width: 100% !important;
-        padding: 0 10px !important;
+    /* Ép tất cả các thẻ không được rộng hơn màn hình */
+    * {
+        max-width: 100vw !important;
+        box-sizing: border-box !important;
     }
 
-    /* 2. HIỆN LẠI MENU & HEADER */
-    .main-header { height: auto !important; padding: 10px 0 !important; }
-    .header-content { flex-direction: column !important; align-items: center !important; }
-    
+    /* 2. FIX HEADER & MENU (Hiện lại đầy đủ) */
+    .main-header { 
+        height: auto !important; 
+        padding: 10px 0 !important;
+        width: 100% !important;
+    }
+    .header-content { 
+        flex-direction: column !important; 
+        align-items: center !important; 
+    }
     .main-nav { 
-        display: flex !important; /* Buộc phải hiện menu */
+        display: flex !important; 
         flex-wrap: wrap; 
         justify-content: center; 
-        gap: 8px; 
+        gap: 8px;
         margin: 10px 0;
     }
-    .main-nav a { font-size: 13px !important; margin: 0 5px !important; padding: 5px 0; }
-
-    .search-box { width: 100% !important; margin-bottom: 10px; }
+    .main-nav a { font-size: 13px !important; margin: 0 5px !important; }
+    .search-box { width: 95% !important; }
     .search-box input { width: 100% !important; height: 40px !important; }
 
-    /* 3. FIX TRANG CHI TIẾT SẢN PHẨM (DETAIL) */
-    .detail-top-grid {
-        grid-template-columns: 1fr !important; /* Chuyển về 1 cột dọc */
-        gap: 20px !important;
+    /* 3. FIX TRANG THANH TOÁN (CHECKOUT) - NƠI ĐANG BỊ LỖI */
+    .checkout-container, .checkout-grid, .billing-details-parent {
+        display: block !important; /* Chuyển từ grid/flex sang block dọc */
+        width: 100% !important;
+        padding: 10px !important;
+        margin: 0 !important;
     }
-    .detail-title { 
-        font-size: 18px !important; 
-        line-height: 1.4 !important; 
-        text-align: center;
-    }
-    .detail-price-box { justify-content: center !important; }
-    .curr-price { font-size: 22px !important; }
-    
-    .size-grid { justify-content: center !important; }
-    .qty-controls { margin: 0 auto 20px !important; }
-    .action-buttons { padding: 0 10px !important; }
 
-    /* 4. GIỮ KHUÔN GIỎ HÀNG (CART) - CARD STYLE */
+    .checkout-form, .order-summary {
+        width: 100% !important;
+        float: none !important; /* Bỏ các thuộc tính đẩy sang phải */
+        margin-bottom: 30px !important;
+        position: relative !important;
+        left: 0 !important;
+    }
+
+    /* Fix các input trong checkout cho to rõ */
+    .checkout-form input, .checkout-form select, .checkout-form textarea {
+        width: 100% !important;
+        font-size: 16px !important; /* Chống iPhone tự zoom */
+        margin-bottom: 15px !important;
+    }
+
+    /* 4. FIX TRANG GIỎ HÀNG (CART) - XẾP DỌC CARD */
     .cart-page table, .cart-page thead, .cart-page tbody, .cart-page tr, .cart-page td {
         display: block !important;
         width: 100% !important;
@@ -492,25 +508,26 @@ input[type="number"] {
     .cart-page thead { display: none !important; }
     .cart-page tr {
         border: 1px solid #eee;
-        margin-bottom: 20px;
-        padding: 15px;
         border-radius: 15px;
+        margin-bottom: 15px;
+        padding: 10px;
     }
     .cart-page td {
         display: flex !important;
         justify-content: space-between;
         align-items: center;
-        padding: 8px 0 !important;
         border: none !important;
+        padding: 8px 0 !important;
     }
-    .cart-img { width: 100px !important; height: auto !important; margin: 0 auto !important; }
+    .cart-img { width: 80px !important; height: auto !important; margin: 0 auto !important; }
 
-    /* 5. FIX TRANG THANH TOÁN (CHECKOUT) */
-    .checkout-grid { display: block !important; }
-    .checkout-form, .order-summary { width: 100% !important; }
-    .checkout-form input { font-size: 16px !important; margin-bottom: 15px !important; }
-    
-    /* 6. BANNER & SLIDESHOW */
-    .banner-text h1 { font-size: 16px !important; padding: 0 10px; }
-    .btn-buy { font-size: 14px !important; padding: 10px 20px !important; }
+    /* 5. FIX TRANG CHI TIẾT SẢN PHẨM (DETAIL) */
+    .detail-top-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+    .detail-title { font-size: 18px !important; text-align: center; }
+    .detail-price-box { justify-content: center !important; }
+    .size-grid { justify-content: center !important; }
+    .qty-controls { margin: 0 auto 20px !important; }
 }
