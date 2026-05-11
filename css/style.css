@@ -438,72 +438,79 @@ input[type="number"] {
 }
 
 @media (max-width: 768px) {
-    /* Khóa chặt màn hình không cho lòi */
+    /* 1. CHỐNG TRÀN & GIỮ KHUNG */
     html, body {
         overflow-x: hidden !important;
         width: 100% !important;
         position: relative;
     }
 
-    /* BIẾN BẢNG THÀNH DẠNG THẺ (CARD) - ĐÂY LÀ CÁCH CHỮA CHÁY XỊN NHẤT */
-    .cart-page table, 
-    .cart-page thead, 
-    .cart-page tbody, 
-    .cart-page th, 
-    .cart-page td, 
-    .cart-page tr {
+    .container {
+        width: 95% !important;
+        max-width: 100% !important;
+        padding: 0 10px !important;
+    }
+
+    /* 2. HIỆN LẠI MENU & HEADER */
+    .main-header { height: auto !important; padding: 10px 0 !important; }
+    .header-content { flex-direction: column !important; align-items: center !important; }
+    
+    .main-nav { 
+        display: flex !important; /* Buộc phải hiện menu */
+        flex-wrap: wrap; 
+        justify-content: center; 
+        gap: 8px; 
+        margin: 10px 0;
+    }
+    .main-nav a { font-size: 13px !important; margin: 0 5px !important; padding: 5px 0; }
+
+    .search-box { width: 100% !important; margin-bottom: 10px; }
+    .search-box input { width: 100% !important; height: 40px !important; }
+
+    /* 3. FIX TRANG CHI TIẾT SẢN PHẨM (DETAIL) */
+    .detail-top-grid {
+        grid-template-columns: 1fr !important; /* Chuyển về 1 cột dọc */
+        gap: 20px !important;
+    }
+    .detail-title { 
+        font-size: 18px !important; 
+        line-height: 1.4 !important; 
+        text-align: center;
+    }
+    .detail-price-box { justify-content: center !important; }
+    .curr-price { font-size: 22px !important; }
+    
+    .size-grid { justify-content: center !important; }
+    .qty-controls { margin: 0 auto 20px !important; }
+    .action-buttons { padding: 0 10px !important; }
+
+    /* 4. GIỮ KHUÔN GIỎ HÀNG (CART) - CARD STYLE */
+    .cart-page table, .cart-page thead, .cart-page tbody, .cart-page tr, .cart-page td {
         display: block !important;
         width: 100% !important;
     }
-
-    /* Ẩn tiêu đề cột (Sản phẩm, Size, Giá...) */
-    .cart-page thead {
-        display: none !important;
-    }
-
-    /* Mỗi sản phẩm trong giỏ biến thành 1 cái hộp (Card) */
+    .cart-page thead { display: none !important; }
     .cart-page tr {
         border: 1px solid #eee;
         margin-bottom: 20px;
         padding: 15px;
         border-radius: 15px;
-        background: #fff;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     }
-
-    /* Căn chỉnh các dòng thông tin trong Card */
     .cart-page td {
         display: flex !important;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 0 !important;
-        border-bottom: 1px solid #f9f9f9 !important;
-        text-align: right;
+        padding: 8px 0 !important;
+        border: none !important;
     }
+    .cart-img { width: 100px !important; height: auto !important; margin: 0 auto !important; }
 
-    /* Sửa riêng ô đầu tiên có Ảnh và Tên */
-    .cart-page td:first-child {
-        flex-direction: column !important;
-        text-align: center;
-        gap: 10px;
-        border-bottom: 2px solid #eee !important;
-    }
-
-    .cart-page td:first-child span {
-        font-weight: bold;
-        font-size: 16px;
-        word-break: break-word; /* Cho phép tên dài tự xuống dòng */
-    }
-
-    .cart-img {
-        width: 120px !important;
-        height: auto !important;
-        margin: 0 auto;
-    }
-
-    /* Nút xóa cho nằm giữa cho đẹp */
-    .cart-page td:last-child {
-        justify-content: center !important;
-        border-bottom: none !important;
-    }
+    /* 5. FIX TRANG THANH TOÁN (CHECKOUT) */
+    .checkout-grid { display: block !important; }
+    .checkout-form, .order-summary { width: 100% !important; }
+    .checkout-form input { font-size: 16px !important; margin-bottom: 15px !important; }
+    
+    /* 6. BANNER & SLIDESHOW */
+    .banner-text h1 { font-size: 16px !important; padding: 0 10px; }
+    .btn-buy { font-size: 14px !important; padding: 10px 20px !important; }
 }
