@@ -438,59 +438,72 @@ input[type="number"] {
 }
 
 @media (max-width: 768px) {
-    /* 1. KHÓA CHẶT TRÀN NGANG */
+    /* Khóa chặt màn hình không cho lòi */
     html, body {
         overflow-x: hidden !important;
         width: 100% !important;
         position: relative;
     }
 
-    /* 2. BIẾN BẢNG GIỎ HÀNG THÀNH KHỐI DỌC (QUAN TRỌNG NHẤT) */
-    /* Phải có class của cái bảng hoặc bọc ngoài, tui giả sử là .cart-page */
-    table, thead, tbody, th, td, tr { 
-        display: block !important; 
-        width: 100% !important; 
+    /* BIẾN BẢNG THÀNH DẠNG THẺ (CARD) - ĐÂY LÀ CÁCH CHỮA CHÁY XỊN NHẤT */
+    .cart-page table, 
+    .cart-page thead, 
+    .cart-page tbody, 
+    .cart-page th, 
+    .cart-page td, 
+    .cart-page tr {
+        display: block !important;
+        width: 100% !important;
     }
 
-    /* Ẩn cái dòng tiêu đề bảng (Sản phẩm, Size, Giá...) cho đỡ chật */
-    thead tr { 
-        display: none !important; 
+    /* Ẩn tiêu đề cột (Sản phẩm, Size, Giá...) */
+    .cart-page thead {
+        display: none !important;
     }
 
-    tr { 
-        border-bottom: 2px solid #eee; 
-        padding: 20px 0; 
-        text-align: center; /* Căn giữa cho dễ nhìn trên điện thoại */
+    /* Mỗi sản phẩm trong giỏ biến thành 1 cái hộp (Card) */
+    .cart-page tr {
+        border: 1px solid #eee;
+        margin-bottom: 20px;
+        padding: 15px;
+        border-radius: 15px;
+        background: #fff;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     }
 
-    td {
-        padding: 10px 5px !important;
-        border: none !important;
-        white-space: normal !important; /* Cho phép tên sản phẩm xuống dòng */
+    /* Căn chỉnh các dòng thông tin trong Card */
+    .cart-page td {
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0 !important;
+        border-bottom: 1px solid #f9f9f9 !important;
+        text-align: right;
     }
 
-    /* Fix ảnh sản phẩm trong giỏ hàng */
-    .cart-img, td img {
+    /* Sửa riêng ô đầu tiên có Ảnh và Tên */
+    .cart-page td:first-child {
+        flex-direction: column !important;
+        text-align: center;
+        gap: 10px;
+        border-bottom: 2px solid #eee !important;
+    }
+
+    .cart-page td:first-child span {
+        font-weight: bold;
+        font-size: 16px;
+        word-break: break-word; /* Cho phép tên dài tự xuống dòng */
+    }
+
+    .cart-img {
         width: 120px !important;
         height: auto !important;
-        margin: 0 auto !important;
-        display: block;
+        margin: 0 auto;
     }
 
-    /* 3. FIX HEADER (Để không bị hụt trắng) */
-    .main-header {
-        width: 100% !important;
-        left: 0 !important;
-    }
-    .header-content {
-        padding: 0 15px !important;
-    }
-
-    /* 4. FIX TRANG CHECKOUT */
-    .checkout-grid {
-        display: block !important;
-    }
-    .order-summary {
-        margin-top: 30px;
+    /* Nút xóa cho nằm giữa cho đẹp */
+    .cart-page td:last-child {
+        justify-content: center !important;
+        border-bottom: none !important;
     }
 }
