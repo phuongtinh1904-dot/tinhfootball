@@ -436,3 +436,81 @@ input[type="number"] {
     color: red;
     margin: 0;
 }
+
+/* --- RESPONSIVE CHO ĐIỆN THOẠI (Dưới 768px) --- */
+@media (max-width: 768px) {
+    /* 1. Sửa Header: Cho các thành phần xếp chồng lên nhau */
+    .main-header {
+        height: auto; /* Bỏ chiều cao cố định 98px */
+        padding: 15px 0;
+    }
+    
+    .header-content {
+        flex-direction: column; /* Xếp Logo, Search, Icon thành hàng dọc */
+        gap: 15px;
+    }
+
+    /* 2. Hiện lại Menu (Nhưng xếp dọc cho dễ bấm) */
+    .main-nav {
+        display: flex !important; /* Hiện lại menu */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .main-nav a {
+        font-size: 14px;
+        margin: 0 5px;
+    }
+
+    /* 3. Sửa ô Search: Không được để 400px nữa */
+    .search-box {
+        width: 100%; /* Co giãn theo màn hình */
+    }
+    
+    .search-box input {
+        width: 100%; /* Chiếm hết chiều ngang điện thoại */
+        height: 40px;
+        font-size: 14px;
+    }
+
+    /* 4. Sửa Banner: Hạ cỡ chữ cho Messi không bị che mặt */
+    .banner-text h1 {
+        font-size: 20px !important; /* Chữ nhỏ lại */
+        margin-bottom: 10px;
+        padding: 0 20px;
+    }
+    
+    .btn-buy {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+
+    /* 5. Sửa 3 vòng tròn Sản Phẩm: Chia 2 cột cho đỡ chật */
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 cột thay vì 3 */
+        gap: 15px;
+    }
+    
+    .cat-name {
+        padding: 8px 15px;
+        font-size: 12px;
+        white-space: nowrap; /* Không cho chữ xuống dòng */
+    }
+
+    /* 6. Sửa lưới sản phẩm (Nike/Adidas) */
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* Giữ 2 cột nhưng thu nhỏ lề */
+        gap: 15px;
+    }
+    
+    .brand-link {
+        font-size: 24px;
+        margin: 20px 0 10px;
+    }
+
+    .p-price {
+        font-size: 18px;
+    }
+}
