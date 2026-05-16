@@ -1,147 +1,196 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ADIDAS F50 LEAGUE TF - TINH FOOTBALL</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header class="main-header">
-        <div class="container header-content">
-            <a href="index.html" class="logo">
-                <span>TINH FOOTBALL</span>
-                <img src="img/Soccer Ball.svg" alt="Logo" class="logo-icon">
+      <div class="container header-content">
+        <a href="index.html" class="logo">
+          <span>TINH FOOTBALL</span>
+          <img src="img/Soccer Ball.svg" alt="Logo" class="logo-icon" />
+        </a>
+        <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+        <nav class="main-nav">
+          <a href="about.html">GIỚI THIỆU</a>
+          <a href="giay.html">GIÀY ĐÁ BÓNG</a>
+          <a href="phu-kien.html">PHỤ KIỆN</a>
+          <a href="quan-ao.html">QUẦN ÁO</a>
+          <a href="lien-he.html">LIÊN HỆ</a>
+          <a href="labthuchanh.html">LAB THỰC HÀNH</a>
+        </nav>
+        <div class="header-actions">
+          <div class="search-box" style="position: relative">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Tìm sản phẩm..."
+              oninput="showLiveResults(this.value)"
+            />
+            <div id="live-search-results" class="live-search-dropdown"></div>
+          </div>
+          <div class="user-controls">
+            <a href="cart.html" class="icon-btn">
+              <img src="img/image 5.svg" alt="Cart" />
+              <span id="cart-count">0</span>
             </a>
-            
-            <nav class="main-nav">
-                <a href="about.html">GIỚI THIỆU</a>
-                <a href="giay.html">GIÀY ĐÁ BÓNG</a>
-                <a href="phu-kien.html">PHỤ KIỆN</a>
-                <a href="quan-ao.html">QUẦN ÁO</a>
-                <a href="lien-he.html">LIÊN HỆ</a>
-            </nav>
-
-            <div class="header-actions">
-                 <div class="search-box" style="position: relative;">
-                <input type="text" id="search-input" placeholder="Tìm sản phẩm..." oninput="showLiveResults(this.value)">
-                <div id="live-search-results" class="live-search-dropdown"></div>
-            </div>
-                <div class="user-controls">
-                    <a href="cart.html" class="icon-btn">
-                        <img src="img/image 5.svg" alt="Cart">
-                        <span id="cart-count">0</span>
-                    </a>
-                    <a href="profile.html" class="icon-btn">
-                        <img src="img/image 6.svg" alt="User">
-                    </a>
-                </div>
-            </div>
+            <a href="profile.html" class="icon-btn">
+              <img src="img/image 6.svg" alt="User" />
+            </a>
+          </div>
         </div>
+      </div>
     </header>
 
     <main class="container section-padding">
-        <div class="detail-top-grid">
-            <div class="detail-image">
-                <img src="img2/imgadidas/a11.png" alt="Adidas F50 League TF" id="main-product-img">
-            </div>
-            <div class="detail-info">
-                <h1 class="detail-title">ADIDAS F50 LEAGUE TF - IE1230 - XANH/HỒNG</h1>
-                
-                <div class="detail-price-box">
-                    <span class="curr-price">2,850,000₫</span>
-                </div>
-
-                <div class="size-selector">
-                    <span class="label">Kích Thước</span>
-                    <div class="size-grid">
-                        <button class="size-item" onclick="selectSize(this)">39</button>
-                        <button class="size-item" onclick="selectSize(this)">40</button>
-                        <button class="size-item" onclick="selectSize(this)">40.5</button>
-                        <button class="size-item" onclick="selectSize(this)">41</button>
-                        <button class="size-item" onclick="selectSize(this)">41.5</button>
-                        <button class="size-item" onclick="selectSize(this)">42</button>
-                        <button class="size-item" onclick="selectSize(this)">43</button>
-                    </div>
-                </div>
-
-                <div class="qty-selector">
-                    <span class="label">Số Lượng</span>
-                    <div class="qty-controls">
-                        <button class="qty-btn" onclick="changeQty(-1)">-</button>
-                        <input type="number" id="quantity" value="1" min="1">
-                        <button class="qty-btn" onclick="changeQty(1)">+</button>
-                    </div>
-                </div>
-
-                <div class="action-buttons">
-                    <button class="btn-add-cart" onclick="addToCart()">Thêm vào giỏ hàng</button>
-                    <button class="btn-buy-now" onclick="buyNow()">MUA NGAY</button>
-                </div>
-            </div>
+      <div class="detail-top-grid">
+        <div class="detail-image">
+          <img
+            src="img2/imgadidas/a11.png"
+            alt="Adidas F50 League TF"
+            id="main-product-img"
+          />
         </div>
+        <div class="detail-info">
+          <h1 class="detail-title">
+            ADIDAS F50 LEAGUE TF - IE1230 - XANH/HỒNG
+          </h1>
 
-        <hr class="divider">
-        <div class="detail-bottom-content">
-            <section class="description">
-                <h2>MÔ TẢ SẢN PHẨM</h2>
-                <h3>ADIDAS F50 LEAGUE TF – CELESTIAL VICTORY PACK (2025)</h3>
-                <p>Sau 9 năm vắng bóng, huyền thoại <strong>adidas F50</strong> đã chính thức trở lại. Lấy cảm hứng từ không gian vũ trụ với các gam màu <strong>Blue Fusion, Lucid Lemon và Lucid Pink</strong>, đôi F50 League TF mang đến diện mạo táo bạo và rực rỡ, được mang bởi những ngôi sao hàng đầu như Messi, Salah, Lamine Yamal...</p>
-                
-                <h3 style="margin-top: 20px;">Thông số kỹ thuật & Công nghệ</h3>
-                <ul>
-                    <li><strong>Upper Fiberskin:</strong> Chất liệu da tổng hợp hoàn toàn mới mỏng nhẹ, mềm mại và đàn hồi vượt trội, mang lại cảm giác bóng thật chân nhất.</li>
-                    <li><strong>Lớp Sprintgrid 3D:</strong> Phủ trên bề mặt giúp tăng ma sát khi chạm bóng, tối ưu khả năng kiểm soát và rê bóng ở tốc độ cao.</li>
-                    <li><strong>Lưỡi gà rời chữ U:</strong> Sợi dệt mỏng co giãn ôm khít mu bàn chân, được cố định hai bên thân giày để hạn chế xô lệch khi thi đấu.</li>
-                    <li><strong>Bộ đệm EVA:</strong> Tạo cảm giác đàn hồi êm ái, hạn chế tối đa phản lực từ mặt sân cứng lên các khớp gối.</li>
-                    <li><strong>Đế đinh mũi tên chuyên dụng:</strong> Cao su cao cấp với thiết kế hai mảnh riêng biệt giúp di chuyển linh hoạt và bứt tốc dễ dàng.</li>
-                </ul>
-            </section>
-            <section class="policy">
-                <h2>CHÍNH SÁCH BẢO HÀNH</h2>
-                
-                <h3>1. Thời hạn bảo hành</h3>
-                <p>TINH FOOTBALL hỗ trợ bảo hành sửa chữa miễn phí trong vòng 6 tháng đối với các sản phẩm do chính TINH FOOTBALL phân phối.</p>
+          <div class="detail-price-box">
+            <span class="curr-price">2,850,000₫</span>
+          </div>
 
-                <h3>2. Trường hợp được bảo hành miễn phí</h3>
-                <ul>
-                    <li>Hở keo</li>
-                    <li>Đứt chỉ</li>
-                    <li>Các lỗi kỹ thuật tương tự phát sinh từ phía nhà sản xuất</li>
-                </ul>
+          <div class="size-selector">
+            <span class="label">Kích Thước</span>
+            <div class="size-grid">
+              <button class="size-item" onclick="selectSize(this)">39</button>
+              <button class="size-item" onclick="selectSize(this)">40</button>
+              <button class="size-item" onclick="selectSize(this)">40.5</button>
+              <button class="size-item" onclick="selectSize(this)">41</button>
+              <button class="size-item" onclick="selectSize(this)">41.5</button>
+              <button class="size-item" onclick="selectSize(this)">42</button>
+              <button class="size-item" onclick="selectSize(this)">43</button>
+            </div>
+          </div>
 
-                <h3>3. Thông tin cần có để được hỗ trợ bảo hành</h3>
-                <p>- Hóa đơn mua hàng</p>
-                <p>- Dữ liệu đơn hàng trên hệ thống</p>
-                <p>- Thông tin kích hoạt bảo hành của shop</p>
-            </section>
+          <div class="qty-selector">
+            <span class="label">Số Lượng</span>
+            <div class="qty-controls">
+              <button class="qty-btn" onclick="changeQty(-1)">-</button>
+              <input type="number" id="quantity" value="1" min="1" />
+              <button class="qty-btn" onclick="changeQty(1)">+</button>
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <button class="btn-add-cart" onclick="addToCart()">
+              Thêm vào giỏ hàng
+            </button>
+            <button class="btn-buy-now" onclick="buyNow()">MUA NGAY</button>
+          </div>
         </div>
+      </div>
+
+      <hr class="divider" />
+      <div class="detail-bottom-content">
+        <section class="description">
+          <h2>MÔ TẢ SẢN PHẨM</h2>
+          <h3>ADIDAS F50 LEAGUE TF – CELESTIAL VICTORY PACK (2025)</h3>
+          <p>
+            Sau 9 năm vắng bóng, huyền thoại <strong>adidas F50</strong> đã
+            chính thức trở lại. Lấy cảm hứng từ không gian vũ trụ với các gam
+            màu <strong>Blue Fusion, Lucid Lemon và Lucid Pink</strong>, đôi F50
+            League TF mang đến diện mạo táo bạo và rực rỡ, được mang bởi những
+            ngôi sao hàng đầu như Messi, Salah, Lamine Yamal...
+          </p>
+
+          <h3 style="margin-top: 20px">Thông số kỹ thuật & Công nghệ</h3>
+          <ul>
+            <li>
+              <strong>Upper Fiberskin:</strong> Chất liệu da tổng hợp hoàn toàn
+              mới mỏng nhẹ, mềm mại và đàn hồi vượt trội, mang lại cảm giác bóng
+              thật chân nhất.
+            </li>
+            <li>
+              <strong>Lớp Sprintgrid 3D:</strong> Phủ trên bề mặt giúp tăng ma
+              sát khi chạm bóng, tối ưu khả năng kiểm soát và rê bóng ở tốc độ
+              cao.
+            </li>
+            <li>
+              <strong>Lưỡi gà rời chữ U:</strong> Sợi dệt mỏng co giãn ôm khít
+              mu bàn chân, được cố định hai bên thân giày để hạn chế xô lệch khi
+              thi đấu.
+            </li>
+            <li>
+              <strong>Bộ đệm EVA:</strong> Tạo cảm giác đàn hồi êm ái, hạn chế
+              tối đa phản lực từ mặt sân cứng lên các khớp gối.
+            </li>
+            <li>
+              <strong>Đế đinh mũi tên chuyên dụng:</strong> Cao su cao cấp với
+              thiết kế hai mảnh riêng biệt giúp di chuyển linh hoạt và bứt tốc
+              dễ dàng.
+            </li>
+          </ul>
+        </section>
+        <section class="policy">
+          <h2>CHÍNH SÁCH BẢO HÀNH</h2>
+
+          <h3>1. Thời hạn bảo hành</h3>
+          <p>
+            TINH FOOTBALL hỗ trợ bảo hành sửa chữa miễn phí trong vòng 6 tháng
+            đối với các sản phẩm do chính TINH FOOTBALL phân phối.
+          </p>
+
+          <h3>2. Trường hợp được bảo hành miễn phí</h3>
+          <ul>
+            <li>Hở keo</li>
+            <li>Đứt chỉ</li>
+            <li>Các lỗi kỹ thuật tương tự phát sinh từ phía nhà sản xuất</li>
+          </ul>
+
+          <h3>3. Thông tin cần có để được hỗ trợ bảo hành</h3>
+          <p>- Hóa đơn mua hàng</p>
+          <p>- Dữ liệu đơn hàng trên hệ thống</p>
+          <p>- Thông tin kích hoạt bảo hành của shop</p>
+        </section>
+      </div>
     </main>
-    <footer class="main-footer" style="background-image: url('img/footer.png');">
-        <div class="footer-overlay">
-            <div class="container footer-flex">
-                <div class="footer-left">
-                    <h2>TINH FOOTBALL</h2>
-                    <p>ĐỒNG HÀNH CÙNG BẠN TRÊN MỌI MẶT SÂN CỎ</p>
-                </div>
-                <div class="footer-right">
-                    <div class="f-col">
-                        <h3>Hotline</h3>
-                        <a href="tel:0362547895" class="footer-link">0362547895</a>
-                        <a href="chinh-sach.html" class="footer-link">Chính sách mua hàng</a>
-                    </div>
-                    <div class="f-col">
-                        <a href="cham-soc.html" class="footer-link">Chăm sóc hỗ trợ</a>
-                        <p class="footer-text-only">Hỗ trợ đổi trả</p>
-                        <a href="#" class="footer-link">Địa chỉ: 180 Cao Lỗ, P4, Q8</a>
-                    </div>
-                </div>
+    <footer
+      class="main-footer"
+      style="background-image: url(&quot;img/footer.png&quot;)"
+    >
+      <div class="footer-overlay">
+        <div class="container footer-flex">
+          <div class="footer-left">
+            <h2>TINH FOOTBALL</h2>
+            <p>ĐỒNG HÀNH CÙNG BẠN TRÊN MỌI MẶT SÂN CỎ</p>
+          </div>
+          <div class="footer-right">
+            <div class="f-col">
+              <h3>Hotline</h3>
+              <a href="tel:0362547895" class="footer-link">0362547895</a>
+              <a href="chinh-sach.html" class="footer-link"
+                >Chính sách mua hàng</a
+              >
             </div>
-            <div class="copyright">© 2026 TINH FOOTBALL. All rights reserved.</div>
+            <div class="f-col">
+              <a href="cham-soc.html" class="footer-link">Chăm sóc hỗ trợ</a>
+              <p class="footer-text-only">Hỗ trợ đổi trả</p>
+              <a href="#" class="footer-link">Địa chỉ: 180 Cao Lỗ, P4, Q8</a>
+            </div>
+          </div>
         </div>
+        <div class="copyright">© 2026 TINH FOOTBALL. All rights reserved.</div>
+      </div>
     </footer>
 
     <script src="js/js1"></script>
-</body>
+  </body>
 </html>

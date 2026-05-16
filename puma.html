@@ -1,138 +1,170 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GIÀY ĐÁ BÓNG PUMA - TINH FOOTBALL</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header class="main-header">
-        <div class="container header-content">
-            <a href="index.html" class="logo">
-                <span>TINH FOOTBALL</span>
-                <img src="img/Soccer Ball.svg" alt="Logo" class="logo-icon">
-            </a>
-            
-            <nav class="main-nav">
-                <a href="about.html">GIỚI THIỆU</a>
-                <a href="giay.html">GIÀY ĐÁ BÓNG</a>
-                <a href="phu-kien.html">PHỤ KIỆN</a>
-                <a href="quan-ao.html">QUẦN ÁO</a>
-                <a href="lien-he.html">LIÊN HỆ</a>
-            </nav>
+      <div class="container header-content">
+        <a href="index.html" class="logo">
+          <span>TINH FOOTBALL</span>
+          <img src="img/Soccer Ball.svg" alt="Logo" class="logo-icon" />
+        </a>
+        <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+        <nav class="main-nav">
+          <a href="about.html">GIỚI THIỆU</a>
+          <a href="giay.html">GIÀY ĐÁ BÓNG</a>
+          <a href="phu-kien.html">PHỤ KIỆN</a>
+          <a href="quan-ao.html">QUẦN ÁO</a>
+          <a href="lien-he.html">LIÊN HỆ</a>
+          <a href="labthuchanh.html">LAB THỰC HÀNH</a>
+        </nav>
 
-            <div class="header-actions">
-                 <div class="search-box" style="position: relative;">
-                <input type="text" id="search-input" placeholder="Tìm sản phẩm..." oninput="showLiveResults(this.value)">
-                <div id="live-search-results" class="live-search-dropdown"></div>
-            </div>
-                <div class="user-controls">
-                    <a href="cart.html" class="icon-btn">
-                        <img src="img/image 5.svg" alt="Cart">
-                        <span id="cart-count">0</span>
-                    </a>
-                    <a href="profile.html" class="icon-btn">
-                        <img src="img/image 6.svg" alt="User">
-                    </a>
-                </div>
-            </div>
+        <div class="header-actions">
+          <div class="search-box" style="position: relative">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Tìm sản phẩm..."
+              oninput="showLiveResults(this.value)"
+            />
+            <div id="live-search-results" class="live-search-dropdown"></div>
+          </div>
+          <div class="user-controls">
+            <a href="cart.html" class="icon-btn">
+              <img src="img/image 5.svg" alt="Cart" />
+              <span id="cart-count">0</span>
+            </a>
+            <a href="profile.html" class="icon-btn">
+              <img src="img/image 6.svg" alt="User" />
+            </a>
+          </div>
         </div>
+      </div>
     </header>
 
     <main class="container section-padding">
-        <h1 class="nike-title">GIÀY ĐÁ BÓNG PUMA SÂN CỎ NHÂN TẠO</h1>
-        <p class="intro-text">
-            Là biểu tượng đích thực trên thị trường giày đá bóng, PUMA luôn tiên phong trong thiết kế táo bạo và công nghệ tiên tiến để mang đến hiệu suất vượt trội cho người chơi ở mọi cấp độ - đặc biệt là người đá phủi trên mặt sân cỏ nhân tạo. Với thiết kế đế TF bám sân tốt, ôm chân chuẩn form và chất liệu cao cấp, giày đá bóng Puma chính hãng là lựa chọn hàng đầu cho những ai đề cao hiệu năng lẫn phong cách thi đấu.
+      <h1 class="nike-title">GIÀY ĐÁ BÓNG PUMA SÂN CỎ NHÂN TẠO</h1>
+      <p class="intro-text">
+        Là biểu tượng đích thực trên thị trường giày đá bóng, PUMA luôn tiên
+        phong trong thiết kế táo bạo và công nghệ tiên tiến để mang đến hiệu
+        suất vượt trội cho người chơi ở mọi cấp độ - đặc biệt là người đá phủi
+        trên mặt sân cỏ nhân tạo. Với thiết kế đế TF bám sân tốt, ôm chân chuẩn
+        form và chất liệu cao cấp, giày đá bóng Puma chính hãng là lựa chọn hàng
+        đầu cho những ai đề cao hiệu năng lẫn phong cách thi đấu.
+      </p>
+
+      <div class="nike-series">
+        <p>
+          <strong>Puma Future:</strong> Dành cho cầu thủ sáng tạo với công nghệ
+          FUZIONFIT+ ôm sát bàn chân. Bề mặt có vân nổi 3D giúp tăng độ bám và
+          kiểm soát bóng chính xác trong phạm vi hẹp.
         </p>
-
-        <div class="nike-series">
-            <p><strong>Puma Future:</strong> Dành cho cầu thủ sáng tạo với công nghệ FUZIONFIT+ ôm sát bàn chân. Bề mặt có vân nổi 3D giúp tăng độ bám và kiểm soát bóng chính xác trong phạm vi hẹp.</p>
-            <p><strong>Puma Ultra:</strong> Tập trung tối đa vào tốc độ với trọng lượng siêu nhẹ nhờ chất liệu ULTRAWEAVE. Cấu trúc đế hỗ trợ bứt tốc và duy trì khả năng điều khiển bóng khi chạy nhanh.</p>
-            <p><strong>Puma King:</strong> Dòng giày huyền thoại sử dụng chất liệu K-BETTER mềm mại như da thật. Thiết kế ưu tiên sự thoải mái tối đa và cảm giác chạm bóng chân thật, tinh tế.</p>
-        </div>
-        <div class="product-grid">
-            <!-- Sản phẩm 1 -->
-            <a href="puma1.html" class="p-card">
-                <div class="p-img"><img src="img2/imgpuma/1.png" alt="Puma Future 8 Pro"></div>
-                <h3>PUMA FUTURE 8 PRO CAGE</h3>
-                <p class="p-price">2,700,000VNĐ</p>
-            </a>
-
-            <!-- Sản phẩm 2 -->
-            <a href="puma2.html" class="p-card">
-                <div class="p-img"><img src="img2/imgpuma/2.png" alt="Puma Ultra 6 Match"></div>
-                <h3>PUMA ULTRA 6 MATCH RE-CHARGE TT</h3>
-                <p class="p-price">1,790,000VNĐ</p>
-            </a>
-
-            <!-- Sản phẩm 3 -->
-            <a href="puma3.html" class="p-card">
-                <div class="p-img"><img src="img2/imgpuma/3.png" alt="Puma King 20 Pro"></div>
-                <h3>PUMA KING 20 PRO CAGE</h3>
-                <p class="p-price">3,850,000VNĐ</p>
-            </a>
-
-            <!-- Sản phẩm 4 -->
-            <a href="puma4.html" class="p-card">
-                <div class="p-img"><img src="img2/imgpuma/4.png" alt="Puma Future 9 Match"></div>
-                <h3>PUMA FUTURE 9 MATCH CREATIVITY TT</h3>
-                <p class="p-price">1,850,000VNĐ</p>
-            </a>
-
-            <!-- Sản phẩm 5 -->
-            <a href="puma5.html" class="p-card">
-                <div class="p-img"><img src="img2/imgpuma/5.png" alt="Puma Future 8 Pro Black"></div>
-                <h3>PUMA FUTURE 8 PRO CAGE</h3>
-                <p class="p-price">2,700,000VNĐ</p>
-            </a>
-
-            <!-- Sản phẩm 6 -->
-            <a href="puma6.html" class="p-card">
-                <div class="p-img"><img src="img2/imgpuma/6.png" alt="Puma Ultra Match Orange"></div>
-                <h3>PUMA ULTRA MATCH TT</h3>
-                <p class="p-price">1,790,000VNĐ</p>
-            </a>
-
-            <!-- Sản phẩm 7 -->
-            <a href="puma7.html" class="p-card">
-                <div class="p-img"><img src="img2/imgpuma/7.png" alt="Puma Ultra Match Pink"></div>
-                <h3>PUMA ULTRA MATCH TT</h3>
-                <p class="p-price">3,850,000VNĐ</p>
-            </a>
-
-            <!-- Sản phẩm 8 -->
-            <a href="puma8.html" class="p-card">
-                <div class="p-img"><img src="img2/imgpuma/8.png" alt="Puma Ultra Ultimate Yellow"></div>
-                <h3>PUMA ULTRA ULTIMATE CAGE</h3>
-                <p class="p-price">1,850,000VNĐ</p>
-            </a>
-        </div>
+        <p>
+          <strong>Puma Ultra:</strong> Tập trung tối đa vào tốc độ với trọng
+          lượng siêu nhẹ nhờ chất liệu ULTRAWEAVE. Cấu trúc đế hỗ trợ bứt tốc và
+          duy trì khả năng điều khiển bóng khi chạy nhanh.
+        </p>
+        <p>
+          <strong>Puma King:</strong> Dòng giày huyền thoại sử dụng chất liệu
+          K-BETTER mềm mại như da thật. Thiết kế ưu tiên sự thoải mái tối đa và
+          cảm giác chạm bóng chân thật, tinh tế.
+        </p>
+      </div>
+      <div class="product-grid">
+        <a href="puma1.html" class="p-card">
+          <div class="p-img">
+            <img src="img2/imgpuma/1.png" alt="Puma Future 8 Pro" />
+          </div>
+          <h3>PUMA FUTURE 8 PRO CAGE</h3>
+          <p class="p-price">2,700,000VNĐ</p>
+        </a>
+        <a href="puma2.html" class="p-card">
+          <div class="p-img">
+            <img src="img2/imgpuma/2.png" alt="Puma Ultra 6 Match" />
+          </div>
+          <h3>PUMA ULTRA 6 MATCH RE-CHARGE TT</h3>
+          <p class="p-price">1,790,000VNĐ</p>
+        </a>
+        <a href="puma3.html" class="p-card">
+          <div class="p-img">
+            <img src="img2/imgpuma/3.png" alt="Puma King 20 Pro" />
+          </div>
+          <h3>PUMA KING 20 PRO CAGE</h3>
+          <p class="p-price">3,850,000VNĐ</p>
+        </a>
+        <a href="puma4.html" class="p-card">
+          <div class="p-img">
+            <img src="img2/imgpuma/4.png" alt="Puma Future 9 Match" />
+          </div>
+          <h3>PUMA FUTURE 9 MATCH CREATIVITY TT</h3>
+          <p class="p-price">1,850,000VNĐ</p>
+        </a>
+        <a href="puma5.html" class="p-card">
+          <div class="p-img">
+            <img src="img2/imgpuma/5.png" alt="Puma Future 8 Pro Black" />
+          </div>
+          <h3>PUMA FUTURE 8 PRO CAGE</h3>
+          <p class="p-price">2,700,000VNĐ</p>
+        </a>
+        <a href="puma6.html" class="p-card">
+          <div class="p-img">
+            <img src="img2/imgpuma/6.png" alt="Puma Ultra Match Orange" />
+          </div>
+          <h3>PUMA ULTRA MATCH TT</h3>
+          <p class="p-price">1,790,000VNĐ</p>
+        </a>
+        <a href="puma7.html" class="p-card">
+          <div class="p-img">
+            <img src="img2/imgpuma/7.png" alt="Puma Ultra Match Pink" />
+          </div>
+          <h3>PUMA ULTRA MATCH TT</h3>
+          <p class="p-price">3,850,000VNĐ</p>
+        </a>
+        <a href="puma8.html" class="p-card">
+          <div class="p-img">
+            <img src="img2/imgpuma/8.png" alt="Puma Ultra Ultimate Yellow" />
+          </div>
+          <h3>PUMA ULTRA ULTIMATE CAGE</h3>
+          <p class="p-price">1,850,000VNĐ</p>
+        </a>
+      </div>
     </main>
-    <footer class="main-footer" style="background-image: url('img/footer.png');">
-        <div class="footer-overlay">
-            <div class="container footer-flex">
-                <div class="footer-left">
-                    <h2>TINH FOOTBALL</h2>
-                    <p>ĐỒNG HÀNH CÙNG BẠN TRÊN MỌI MẶT SÂN CỎ</p>
-                </div>
-                <div class="footer-right">
-                    <div class="f-col">
-                        <h3>Hotline</h3>
-                        <a href="tel:0362547895" class="footer-link">0362547895</a>
-                        <a href="chinh-sach.html" class="footer-link">Chính sách mua hàng</a>
-                    </div>
-                    <div class="f-col">
-                        <a href="cham-soc.html" class="footer-link">Chăm sóc hỗ trợ</a>
-                        <p class="footer-text-only">Hỗ trợ đổi trả</p>
-                        <a href="#" class="footer-link">Địa chỉ: 180 Cao Lỗ, P4, Q8</a>
-                    </div>
-                </div>
+    <footer
+      class="main-footer"
+      style="background-image: url(&quot;img/footer.png&quot;)"
+    >
+      <div class="footer-overlay">
+        <div class="container footer-flex">
+          <div class="footer-left">
+            <h2>TINH FOOTBALL</h2>
+            <p>ĐỒNG HÀNH CÙNG BẠN TRÊN MỌI MẶT SÂN CỎ</p>
+          </div>
+          <div class="footer-right">
+            <div class="f-col">
+              <h3>Hotline</h3>
+              <a href="tel:0362547895" class="footer-link">0362547895</a>
+              <a href="chinh-sach.html" class="footer-link"
+                >Chính sách mua hàng</a
+              >
             </div>
-            <div class="copyright">© 2026 TINH FOOTBALL. All rights reserved.</div>
+            <div class="f-col">
+              <a href="cham-soc.html" class="footer-link">Chăm sóc hỗ trợ</a>
+              <p class="footer-text-only">Hỗ trợ đổi trả</p>
+              <a href="#" class="footer-link">Địa chỉ: 180 Cao Lỗ, P4, Q8</a>
+            </div>
+          </div>
         </div>
+        <div class="copyright">© 2026 TINH FOOTBALL. All rights reserved.</div>
+      </div>
     </footer>
     <script src="js/js1"></script>
-</body>
+  </body>
 </html>

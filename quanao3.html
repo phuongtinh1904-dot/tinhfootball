@@ -1,149 +1,200 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ÁO ĐẤU TÂY BAN NHA 26 - TINH FOOTBALL</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header class="main-header">
-        <div class="container header-content">
-            <a href="index.html" class="logo">
-                <span>TINH FOOTBALL</span>
-                <img src="img/Soccer Ball.svg" alt="Logo" class="logo-icon">
+      <div class="container header-content">
+        <a href="index.html" class="logo">
+          <span>TINH FOOTBALL</span>
+          <img src="img/Soccer Ball.svg" alt="Logo" class="logo-icon" />
+        </a>
+        <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+        <nav class="main-nav">
+          <a href="about.html">GIỚI THIỆU</a>
+          <a href="giay.html">GIÀY ĐÁ BÓNG</a>
+          <a href="phu-kien.html">PHỤ KIỆN</a>
+          <a href="quan-ao.html">QUẦN ÁO</a>
+          <a href="lien-he.html">LIÊN HỆ</a>
+          <a href="labthuchanh.html">LAB THỰC HÀNH</a>
+        </nav>
+        <div class="header-actions">
+          <div class="search-box" style="position: relative">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Tìm sản phẩm..."
+              oninput="showLiveResults(this.value)"
+            />
+            <div id="live-search-results" class="live-search-dropdown"></div>
+          </div>
+          <div class="user-controls">
+            <a href="cart.html" class="icon-btn">
+              <img src="img/image 5.svg" alt="Cart" />
+              <span id="cart-count">0</span>
             </a>
-            
-            <nav class="main-nav">
-                <a href="about.html">GIỚI THIỆU</a>
-                <a href="giay.html">GIÀY ĐÁ BÓNG</a>
-                <a href="phu-kien.html">PHỤ KIỆN</a>
-                <a href="quan-ao.html">QUẦN ÁO</a>
-                <a href="lien-he.html">LIÊN HỆ</a>
-            </nav>
-
-            <div class="header-actions">
-                <div class="search-box" style="position: relative;">
-                <input type="text" id="search-input" placeholder="Tìm sản phẩm..." oninput="showLiveResults(this.value)">
-                <div id="live-search-results" class="live-search-dropdown"></div>
-            </div>
-                <div class="user-controls">
-                    <a href="cart.html" class="icon-btn">
-                        <img src="img/image 5.svg" alt="Cart">
-                        <span id="cart-count">0</span>
-                    </a>
-                    <a href="profile.html" class="icon-btn">
-                        <img src="img/image 6.svg" alt="User">
-                    </a>
-                </div>
-            </div>
+            <a href="profile.html" class="icon-btn">
+              <img src="img/image 6.svg" alt="User" />
+            </a>
+          </div>
         </div>
+      </div>
     </header>
 
     <main class="container section-padding">
-        <div class="detail-top-grid">
-            <div class="detail-image">
-                <img src="img2/imgquanao/qa3.png" alt="Áo đấu Tây Ban Nha 26" id="main-product-img">
-            </div>
-
-            <div class="detail-info">
-                <h1 class="detail-title">ÁO ĐẤU SÂN KHÁCH ĐỘI TUYỂN TÂY BAN NHA 26</h1>
-                
-                <div class="detail-price-box">
-                    <span class="curr-price">3,350,000₫</span>
-                </div>
-
-                <div class="size-selector">
-                    <span class="label">Kích Thước</span>
-                    <div class="size-grid">
-                        <button class="size-item" onclick="selectSize(this)">S</button>
-                        <button class="size-item" onclick="selectSize(this)">M</button>
-                        <button class="size-item" onclick="selectSize(this)">L</button>
-                        <button class="size-item" onclick="selectSize(this)">XL</button>
-                        <button class="size-item" onclick="selectSize(this)">XXL</button>
-                    </div>
-                </div>
-
-                <div class="qty-selector">
-                    <span class="label">Số Lượng</span>
-                    <div class="qty-controls">
-                        <button class="qty-btn" onclick="changeQty(-1)">-</button>
-                        <input type="number" id="quantity" value="1" min="1">
-                        <button class="qty-btn" onclick="changeQty(1)">+</button>
-                    </div>
-                </div>
-
-                <div class="action-buttons">
-                    <button class="btn-add-cart" onclick="addToCart()">Thêm vào giỏ hàng</button>
-                    <button class="btn-buy-now" onclick="buyNow()">MUA NGAY</button>
-                </div>
-            </div>
+      <div class="detail-top-grid">
+        <div class="detail-image">
+          <img
+            src="img2/imgquanao/qa3.png"
+            alt="Áo đấu Tây Ban Nha 26"
+            id="main-product-img"
+          />
         </div>
 
-        <hr class="divider">
+        <div class="detail-info">
+          <h1 class="detail-title">
+            ÁO ĐẤU SÂN KHÁCH ĐỘI TUYỂN TÂY BAN NHA 26
+          </h1>
 
-        <div class="detail-bottom-content">
-            <section class="description">
-                <h2>MÔ TẢ SẢN PHẨM</h2>
-                <p>Áo đấu sân khách của đội tuyển Tây Ban Nha được ứng dụng công nghệ <strong>Climacool</strong> tiên tiến, mang lại sự mát mẻ và khô ráo tuyệt đối trong suốt thời gian vận động cường độ cao.</p>
-                <p>Tôn vinh tinh hoa văn học cổ điển Tây Ban Nha, mẫu áo này gây ấn tượng mạnh mẽ với họa tiết lặp lại tinh xảo, lấy cảm hứng từ những bản thảo cổ xưa và các trang sách nhuốm màu thời gian, tạo nên một diện mạo đầy tính nghệ thuật và bản sắc.</p>
-                
-                <h3 style="margin-top: 20px;">Đặc điểm nổi bật & Công nghệ</h3>
-                <ul>
-                    <li><strong>Phom dáng hiện đại:</strong> Thiết kế ôm gọn tạo nên đường nét tinh tế, mang lại cảm giác chuyển động linh hoạt và không vướng víu trên sân cỏ.</li>
-                    <li><strong>Vải Interlock cao cấp:</strong> Cấu trúc vải mang lại bề mặt mịn màng, êm ái khi tiếp xúc trực tiếp với da, giảm thiểu ma sát khi di chuyển.</li>
-                    <li><strong>Công nghệ Climacool:</strong> Hệ thống thấm hút và phân tán mồ hôi hiệu quả, giúp bạn duy trì phong độ mát mẻ và hạn chế tối đa xao nhãng.</li>
-                    <li><strong>Huy hiệu Liên đoàn:</strong> Được may cố định sắc nét trên áo, là minh chứng cho niềm đam mê bóng đá cuồng nhiệt của người hâm mộ La Roja.</li>
-                </ul>
-            </section>
+          <div class="detail-price-box">
+            <span class="curr-price">3,350,000₫</span>
+          </div>
 
-            <section class="policy">
-                <h2>CHÍNH SÁCH BẢO HÀNH</h2>
-                
-                <h3>1. Thời hạn bảo hành</h3>
-                <p>TINH FOOTBALL hỗ trợ bảo hành sửa chữa hoặc đổi mới lỗi kỹ thuật trong vòng 3 tháng kể từ ngày nhận hàng.</p>
+          <div class="size-selector">
+            <span class="label">Kích Thước</span>
+            <div class="size-grid">
+              <button class="size-item" onclick="selectSize(this)">S</button>
+              <button class="size-item" onclick="selectSize(this)">M</button>
+              <button class="size-item" onclick="selectSize(this)">L</button>
+              <button class="size-item" onclick="selectSize(this)">XL</button>
+              <button class="size-item" onclick="selectSize(this)">XXL</button>
+            </div>
+          </div>
 
-                <h3>2. Trường hợp được hỗ trợ bảo hành</h3>
-                <ul>
-                    <li>Lỗi bong tróc logo hoặc nhãn ép nhiệt khi vừa sử dụng</li>
-                    <li>Lỗi đường chỉ may hoặc vải bị tưa khi sản phẩm còn mới</li>
-                    <li>Giao sai màu sắc, phom dáng hoặc kích cỡ đã đặt</li>
-                </ul>
+          <div class="qty-selector">
+            <span class="label">Số Lượng</span>
+            <div class="qty-controls">
+              <button class="qty-btn" onclick="changeQty(-1)">-</button>
+              <input type="number" id="quantity" value="1" min="1" />
+              <button class="qty-btn" onclick="changeQty(1)">+</button>
+            </div>
+          </div>
 
-                <h3>3. Thông tin cần có để được hỗ trợ bảo hành</h3>
-                <p>- Hóa đơn mua hàng hoặc mã đơn hàng trên hệ thống</p>
-                <p>- Sản phẩm phải còn nguyên tem mác chính hãng (đối với trường hợp đổi mới)</p>
-                <p>- Thông tin tài khoản khách hàng trên hệ thống TINH FOOTBALL</p>
-            </section>
+          <div class="action-buttons">
+            <button class="btn-add-cart" onclick="addToCart()">
+              Thêm vào giỏ hàng
+            </button>
+            <button class="btn-buy-now" onclick="buyNow()">MUA NGAY</button>
+          </div>
         </div>
+      </div>
+
+      <hr class="divider" />
+
+      <div class="detail-bottom-content">
+        <section class="description">
+          <h2>MÔ TẢ SẢN PHẨM</h2>
+          <p>
+            Áo đấu sân khách của đội tuyển Tây Ban Nha được ứng dụng công nghệ
+            <strong>Climacool</strong> tiên tiến, mang lại sự mát mẻ và khô ráo
+            tuyệt đối trong suốt thời gian vận động cường độ cao.
+          </p>
+          <p>
+            Tôn vinh tinh hoa văn học cổ điển Tây Ban Nha, mẫu áo này gây ấn
+            tượng mạnh mẽ với họa tiết lặp lại tinh xảo, lấy cảm hứng từ những
+            bản thảo cổ xưa và các trang sách nhuốm màu thời gian, tạo nên một
+            diện mạo đầy tính nghệ thuật và bản sắc.
+          </p>
+
+          <h3 style="margin-top: 20px">Đặc điểm nổi bật & Công nghệ</h3>
+          <ul>
+            <li>
+              <strong>Phom dáng hiện đại:</strong> Thiết kế ôm gọn tạo nên đường
+              nét tinh tế, mang lại cảm giác chuyển động linh hoạt và không
+              vướng víu trên sân cỏ.
+            </li>
+            <li>
+              <strong>Vải Interlock cao cấp:</strong> Cấu trúc vải mang lại bề
+              mặt mịn màng, êm ái khi tiếp xúc trực tiếp với da, giảm thiểu ma
+              sát khi di chuyển.
+            </li>
+            <li>
+              <strong>Công nghệ Climacool:</strong> Hệ thống thấm hút và phân
+              tán mồ hôi hiệu quả, giúp bạn duy trì phong độ mát mẻ và hạn chế
+              tối đa xao nhãng.
+            </li>
+            <li>
+              <strong>Huy hiệu Liên đoàn:</strong> Được may cố định sắc nét trên
+              áo, là minh chứng cho niềm đam mê bóng đá cuồng nhiệt của người
+              hâm mộ La Roja.
+            </li>
+          </ul>
+        </section>
+
+        <section class="policy">
+          <h2>CHÍNH SÁCH BẢO HÀNH</h2>
+
+          <h3>1. Thời hạn bảo hành</h3>
+          <p>
+            TINH FOOTBALL hỗ trợ bảo hành sửa chữa hoặc đổi mới lỗi kỹ thuật
+            trong vòng 3 tháng kể từ ngày nhận hàng.
+          </p>
+
+          <h3>2. Trường hợp được hỗ trợ bảo hành</h3>
+          <ul>
+            <li>Lỗi bong tróc logo hoặc nhãn ép nhiệt khi vừa sử dụng</li>
+            <li>Lỗi đường chỉ may hoặc vải bị tưa khi sản phẩm còn mới</li>
+            <li>Giao sai màu sắc, phom dáng hoặc kích cỡ đã đặt</li>
+          </ul>
+
+          <h3>3. Thông tin cần có để được hỗ trợ bảo hành</h3>
+          <p>- Hóa đơn mua hàng hoặc mã đơn hàng trên hệ thống</p>
+          <p>
+            - Sản phẩm phải còn nguyên tem mác chính hãng (đối với trường hợp
+            đổi mới)
+          </p>
+          <p>- Thông tin tài khoản khách hàng trên hệ thống TINH FOOTBALL</p>
+        </section>
+      </div>
     </main>
 
-    <footer class="main-footer" style="background-image: url('img/footer.png');">
-        <div class="footer-overlay">
-            <div class="container footer-flex">
-                <div class="footer-left">
-                    <h2>TINH FOOTBALL</h2>
-                    <p>ĐỒNG HÀNH CÙNG BẠN TRÊN MỌI MẶT SÂN CỎ</p>
-                </div>
-                <div class="footer-right">
-                    <div class="f-col">
-                        <h3>Hotline</h3>
-                        <a href="tel:0362547895" class="footer-link">0362547895</a>
-                        <a href="chinh-sach.html" class="footer-link">Chính sách mua hàng</a>
-                    </div>
-                    <div class="f-col">
-                        <a href="cham-soc.html" class="footer-link">Chăm sóc hỗ trợ</a>
-                        <p class="footer-text-only">Hỗ trợ đổi trả</p>
-                        <a href="#" class="footer-link">Địa chỉ: 180 Cao Lỗ, P4, Q8</a>
-                    </div>
-                </div>
+    <footer
+      class="main-footer"
+      style="background-image: url(&quot;img/footer.png&quot;)"
+    >
+      <div class="footer-overlay">
+        <div class="container footer-flex">
+          <div class="footer-left">
+            <h2>TINH FOOTBALL</h2>
+            <p>ĐỒNG HÀNH CÙNG BẠN TRÊN MỌI MẶT SÂN CỎ</p>
+          </div>
+          <div class="footer-right">
+            <div class="f-col">
+              <h3>Hotline</h3>
+              <a href="tel:0362547895" class="footer-link">0362547895</a>
+              <a href="chinh-sach.html" class="footer-link"
+                >Chính sách mua hàng</a
+              >
             </div>
-            <div class="copyright">© 2026 TINH FOOTBALL. All rights reserved.</div>
+            <div class="f-col">
+              <a href="cham-soc.html" class="footer-link">Chăm sóc hỗ trợ</a>
+              <p class="footer-text-only">Hỗ trợ đổi trả</p>
+              <a href="#" class="footer-link">Địa chỉ: 180 Cao Lỗ, P4, Q8</a>
+            </div>
+          </div>
         </div>
+        <div class="copyright">© 2026 TINH FOOTBALL. All rights reserved.</div>
+      </div>
     </footer>
 
     <script src="js/js1"></script>
-</body>
+  </body>
 </html>

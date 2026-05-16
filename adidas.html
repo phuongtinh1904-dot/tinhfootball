@@ -1,158 +1,222 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GIÀY ĐÁ BÓNG ADIDAS - TINH FOOTBALL</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!-- HEADER -->
     <header class="main-header">
-        <div class="container header-content">
-            <a href="index.html" class="logo">
-                <span>TINH FOOTBALL</span>
-                <img src="img/Soccer Ball.svg" alt="Logo" class="logo-icon">
-            </a>
-            <nav class="main-nav">
-                <a href="about.html">GIỚI THIỆU</a>
-                <a href="giay.html">GIÀY ĐÁ BÓNG</a>
-                <a href="phu-kien.html">PHỤ KIỆN</a>
-                <a href="quan-ao.html">QUẦN ÁO</a>
-                <a href="lien-he.html">LIÊN HỆ</a>
-            </nav>
-            <div class="header-actions">
-            <div class="search-box" style="position: relative;">
-                <input type="text" id="search-input" placeholder="Tìm sản phẩm..." oninput="showLiveResults(this.value)">
-                <div id="live-search-results" class="live-search-dropdown"></div>
-            </div>
-                <div class="user-controls">
-                    <a href="cart.html" class="icon-btn"><img src="img/image 5.svg" alt="Cart"><span id="cart-count">0</span></a>
-                    <a href="profile.html" class="icon-btn"><img src="img/image 6.svg" alt="User"></a>
-                </div>
-            </div>
+      <div class="container header-content">
+        <a href="index.html" class="logo">
+          <span>TINH FOOTBALL</span>
+          <img src="img/Soccer Ball.svg" alt="Logo" class="logo-icon" />
+        </a>
+        <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+        <nav class="main-nav">
+          <a href="about.html">GIỚI THIỆU</a>
+          <a href="giay.html">GIÀY ĐÁ BÓNG</a>
+          <a href="phu-kien.html">PHỤ KIỆN</a>
+          <a href="quan-ao.html">QUẦN ÁO</a>
+          <a href="lien-he.html">LIÊN HỆ</a>
+          <a href="labthuchanh.html">LAB THỰC HÀNH</a>
+        </nav>
+        <div class="header-actions">
+          <div class="search-box" style="position: relative">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Tìm sản phẩm..."
+              oninput="showLiveResults(this.value)"
+            />
+            <div id="live-search-results" class="live-search-dropdown"></div>
+          </div>
+          <div class="user-controls">
+            <a href="cart.html" class="icon-btn"
+              ><img src="img/image 5.svg" alt="Cart" /><span id="cart-count"
+                >0</span
+              ></a
+            >
+            <a href="profile.html" class="icon-btn"
+              ><img src="img/image 6.svg" alt="User"
+            /></a>
+          </div>
         </div>
+      </div>
     </header>
 
     <main class="container section-padding">
-        <!-- PHẦN GIỚI THIỆU -->
-        <h1 class="nike-title">GIÀY ĐÁ BÓNG ADIDAS SÂN CỎ NHÂN TẠO</h1>
-        <p class="intro-text">
-            Nhắc đến giày đá bóng, không thể không nhắc đến adidas – thương hiệu gắn liền với những huyền thoại sân cỏ như Lionel Messi. Không chỉ nổi bật về danh tiếng, adidas còn là cái tên tiên phong trong việc ứng dụng công nghệ hiện đại nhằm tối ưu hóa cảm giác bóng, tốc độ và khả năng kiểm soát trận đấu.
+      <!-- PHẦN GIỚI THIỆU -->
+      <h1 class="nike-title">GIÀY ĐÁ BÓNG ADIDAS SÂN CỎ NHÂN TẠO</h1>
+      <p class="intro-text">
+        Nhắc đến giày đá bóng, không thể không nhắc đến adidas – thương hiệu gắn
+        liền với những huyền thoại sân cỏ như Lionel Messi. Không chỉ nổi bật về
+        danh tiếng, adidas còn là cái tên tiên phong trong việc ứng dụng công
+        nghệ hiện đại nhằm tối ưu hóa cảm giác bóng, tốc độ và khả năng kiểm
+        soát trận đấu.
+      </p>
+
+      <div class="nike-series">
+        <p>
+          <strong>Adidas F50:</strong> Tăng tốc & linh hoạt: Thiết kế siêu nhẹ,
+          ôm sát bàn chân, lý tưởng cho tiền đạo cần bứt tốc và đảo hướng nhanh.
         </p>
+        <p>
+          <strong>Adidas Predator:</strong> Kiểm soát & chính xác: Thân giày có
+          vân cao su giúp kiểm soát bóng hiệu quả, tăng độ xoáy và lực sút.
+        </p>
+        <p>
+          <strong>Adidas Copa:</strong> Cảm giác bóng & thoải mái: Upper chất
+          liệu da mềm mang lại cảm giác chạm bóng mượt mà, thoải mái cả trận.
+        </p>
+      </div>
 
-        <div class="nike-series">
-            <p><strong>Adidas F50:</strong> Tăng tốc & linh hoạt: Thiết kế siêu nhẹ, ôm sát bàn chân, lý tưởng cho tiền đạo cần bứt tốc và đảo hướng nhanh.</p>
-            <p><strong>Adidas Predator:</strong> Kiểm soát & chính xác: Thân giày có vân cao su giúp kiểm soát bóng hiệu quả, tăng độ xoáy và lực sút.</p>
-            <p><strong>Adidas Copa:</strong> Cảm giác bóng & thoải mái: Upper chất liệu da mềm mang lại cảm giác chạm bóng mượt mà, thoải mái cả trận.</p>
-        </div>
+      <!-- LƯỚI 12 SẢN PHẨM ADIDAS -->
+      <div class="product-grid">
+        <!-- Hàng 1 -->
+        <a href="adidas1.html" class="p-card">
+          <div class="p-img">
+            <img src="img2/imgadidas/1.png" alt="Adidas Predator 24" />
+          </div>
+          <h3>ADIDAS PREDATOR 24 LEAGUE TF</h3>
+          <p class="p-price">2,050,000VNĐ</p>
+        </a>
 
-        <!-- LƯỚI 12 SẢN PHẨM ADIDAS -->
-        <div class="product-grid">
-            <!-- Hàng 1 -->
-            <a href="adidas1.html" class="p-card">
-                <div class="p-img"><img src="img2/imgadidas/1.png" alt="Adidas Predator 24"></div>
-                <h3>ADIDAS PREDATOR 24 LEAGUE TF</h3>
-                <p class="p-price">2,050,000VNĐ</p>
-            </a>
+        <a href="adidas2.html" class="p-card">
+          <div class="p-img">
+            <img src="img2/imgadidas/2.png" alt="Adidas Copa Pure 3" />
+          </div>
+          <h3>ADIDAS COPA PURE 3 LEAGUE TF</h3>
+          <p class="p-price">1,950,000VNĐ</p>
+        </a>
 
-            <a href="adidas2.html" class="p-card">
-                <div class="p-img"><img src="img2/imgadidas/2.png" alt="Adidas Copa Pure 3"></div>
-                <h3>ADIDAS COPA PURE 3 LEAGUE TF</h3>
-                <p class="p-price">1,950,000VNĐ</p>
-            </a>
+        <a href="adidas3.html" class="p-card">
+          <div class="p-img">
+            <img src="img2/imgadidas/3.png" alt="Adidas X Crazyfast" />
+          </div>
+          <h3>ADIDAS X CRAZYFAST MESSI.3 TF</h3>
+          <p class="p-price">3,850,000VNĐ</p>
+        </a>
 
-            <a href="adidas3.html" class="p-card">
-                <div class="p-img"><img src="img2/imgadidas/3.png" alt="Adidas X Crazyfast"></div>
-                <h3>ADIDAS X CRAZYFAST MESSI.3 TF</h3>
-                <p class="p-price">3,850,000VNĐ</p>
-            </a>
+        <a href="adidas4.html" class="p-card">
+          <div class="p-img">
+            <img src="img2/imgadidas/4.png" alt="Adidas F50 Messi" />
+          </div>
+          <h3>ADIDAS F50 MESSI LEAGUE TF</h3>
+          <p class="p-price">3,850,000VNĐ</p>
+        </a>
 
-            <a href="adidas4.html" class="p-card">
-                <div class="p-img"><img src="img2/imgadidas/4.png" alt="Adidas F50 Messi"></div>
-                <h3>ADIDAS F50 MESSI LEAGUE TF</h3>
-                <p class="p-price">3,850,000VNĐ</p>
-            </a>
+        <!-- Hàng 2 -->
+        <a href="adidas5.html" class="p-card">
+          <div class="p-img">
+            <img src="img2/imgadidas/5.png" alt="Adidas F50" />
+          </div>
+          <h3>ADIDAS F50 LEAGUE TF</h3>
+          <p class="p-price">2,150,000VNĐ</p>
+        </a>
 
-            <!-- Hàng 2 -->
-            <a href="adidas5.html" class="p-card">
-                <div class="p-img"><img src="img2/imgadidas/5.png" alt="Adidas F50"></div>
-                <h3>ADIDAS F50 LEAGUE TF</h3>
-                <p class="p-price">2,150,000VNĐ</p>
-            </a>
+        <a href="adidas6.html" class="p-card">
+          <div class="p-img">
+            <img src="img2/imgadidas/6.png" alt="Adidas F50 Pro" />
+          </div>
+          <h3>ADIDAS F50 PRO TF</h3>
+          <p class="p-price">2,950,000VNĐ</p>
+        </a>
 
-            <a href="adidas6.html" class="p-card">
-                <div class="p-img"><img src="img2/imgadidas/6.png" alt="Adidas F50 Pro"></div>
-                <h3>ADIDAS F50 PRO TF</h3>
-                <p class="p-price">2,950,000VNĐ</p>
-            </a>
+        <a href="adidas7.html" class="p-card">
+          <div class="p-img">
+            <img src="img2/imgadidas/7.png" alt="Adidas F50 Pro" />
+          </div>
+          <h3>ADIDAS F50 PRO TF</h3>
+          <p class="p-price">2,850,000VNĐ</p>
+        </a>
 
-            <a href="adidas7.html" class="p-card">
-                <div class="p-img"><img src="img2/imgadidas/7.png" alt="Adidas F50 Pro"></div>
-                <h3>ADIDAS F50 PRO TF</h3>
-                <p class="p-price">2,850,000VNĐ</p>
-            </a>
+        <a href="adidas8.html" class="p-card">
+          <div class="p-img">
+            <img src="img2/imgadidas/8.png" alt="Adidas Predator 24" />
+          </div>
+          <h3>ADIDAS PREDATOR 24 LEAGUE LƯỠI GÀ LẬT TF</h3>
+          <p class="p-price">1,850,000VNĐ</p>
+        </a>
 
-            <a href="adidas8.html" class="p-card">
-                <div class="p-img"><img src="img2/imgadidas/8.png" alt="Adidas Predator 24"></div>
-                <h3>ADIDAS PREDATOR 24 LEAGUE LƯỠI GÀ LẬT TF</h3>
-                <p class="p-price">1,850,000VNĐ</p>
-            </a>
+        <!-- Hàng 3 -->
+        <a href="adidas9.html" class="p-card">
+          <div class="p-img">
+            <img src="img2/imgadidas/9.png" alt="Adidas Predator 24" />
+          </div>
+          <h3>ADIDAS PREDATOR 24 LEAGUE L TF</h3>
+          <p class="p-price">2,550,000VNĐ</p>
+        </a>
 
-            <!-- Hàng 3 -->
-            <a href="adidas9.html" class="p-card">
-                <div class="p-img"><img src="img2/imgadidas/9.png" alt="Adidas Predator 24"></div>
-                <h3>ADIDAS PREDATOR 24 LEAGUE L TF</h3>
-                <p class="p-price">2,550,000VNĐ</p>
-            </a>
+        <a href="adidas10.html" class="p-card">
+          <div class="p-img">
+            <img src="img2/imgadidas/10.png" alt="Adidas Predator 24" />
+          </div>
+          <h3>ADIDAS PREDATOR 24 LEAGUE LƯỠI GÀ LẬT TF</h3>
+          <p class="p-price">1,950,000VNĐ</p>
+        </a>
 
-            <a href="adidas10.html" class="p-card">
-                <div class="p-img"><img src="img2/imgadidas/10.png" alt="Adidas Predator 24"></div>
-                <h3>ADIDAS PREDATOR 24 LEAGUE LƯỠI GÀ LẬT TF</h3>
-                <p class="p-price">1,950,000VNĐ</p>
-            </a>
+        <a href="adidas11.html" class="p-card">
+          <div class="p-img">
+            <img src="img2/imgadidas/11.png" alt="Adidas F50" />
+          </div>
+          <h3>ADIDAS F50 LEAGUE TF</h3>
+          <p class="p-price">2,850,000VNĐ</p>
+        </a>
 
-            <a href="adidas11.html" class="p-card">
-                <div class="p-img"><img src="img2/imgadidas/11.png" alt="Adidas F50"></div>
-                <h3>ADIDAS F50 LEAGUE TF</h3>
-                <p class="p-price">2,850,000VNĐ</p>
-            </a>
-
-            <a href="adidas12.html" class="p-card">
-                <div class="p-img"><img src="img2/imgadidas/12.png" alt="Adidas Predator 24"></div>
-                <h3>ADIDAS PREDATOR 24 LEAGUE L TF</h3>
-                <p class="p-price">1,850,000VNĐ</p>
-            </a>
-        </div>
+        <a href="adidas12.html" class="p-card">
+          <div class="p-img">
+            <img src="img2/imgadidas/12.png" alt="Adidas Predator 24" />
+          </div>
+          <h3>ADIDAS PREDATOR 24 LEAGUE L TF</h3>
+          <p class="p-price">1,850,000VNĐ</p>
+        </a>
+      </div>
     </main>
 
     <!-- FOOTER -->
-    <footer class="main-footer" style="background-image: url('img/footer.png');">
-        <div class="footer-overlay">
-            <div class="container footer-flex">
-                <div class="footer-left">
-                    <h2>TINH FOOTBALL</h2>
-                    <p>ĐỒNG HÀNH CÙNG BẠN TRÊN MỌI MẶT SÂN CỎ</p>
-                </div>
-                <div class="footer-right">
-                    <div class="f-col">
-                        <h3>Hotline</h3>
-                        <a href="tel:0362547895" class="footer-link red-bold">0362547895</a>
-                        <a href="chinh-sach.html" class="footer-link">Chính sách mua hàng</a>
-                    </div>
-                    <div class="f-col">
-                        <a href="cham-soc.html" class="footer-link">Chăm sóc hỗ trợ</a>
-                        <p class="footer-text-only">Hỗ trợ đổi trả</p>
-                        <a href="http://googleusercontent.com/maps.google.com/4" target="_blank" class="footer-link">Địa chỉ: 180 Cao Lỗ, P4, Q8</a>
-                    </div>
-                </div>
+    <footer
+      class="main-footer"
+      style="background-image: url(&quot;img/footer.png&quot;)"
+    >
+      <div class="footer-overlay">
+        <div class="container footer-flex">
+          <div class="footer-left">
+            <h2>TINH FOOTBALL</h2>
+            <p>ĐỒNG HÀNH CÙNG BẠN TRÊN MỌI MẶT SÂN CỎ</p>
+          </div>
+          <div class="footer-right">
+            <div class="f-col">
+              <h3>Hotline</h3>
+              <a href="tel:0362547895" class="footer-link red-bold"
+                >0362547895</a
+              >
+              <a href="chinh-sach.html" class="footer-link"
+                >Chính sách mua hàng</a
+              >
             </div>
-            <div class="copyright">© 2026 TINH FOOTBALL. All rights reserved.</div>
+            <div class="f-col">
+              <a href="cham-soc.html" class="footer-link">Chăm sóc hỗ trợ</a>
+              <p class="footer-text-only">Hỗ trợ đổi trả</p>
+              <a
+                href="http://googleusercontent.com/maps.google.com/4"
+                target="_blank"
+                class="footer-link"
+                >Địa chỉ: 180 Cao Lỗ, P4, Q8</a
+              >
+            </div>
+          </div>
         </div>
+        <div class="copyright">© 2026 TINH FOOTBALL. All rights reserved.</div>
+      </div>
     </footer>
 
     <script src="js/js1"></script>
-</body>
+  </body>
 </html>

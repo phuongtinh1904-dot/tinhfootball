@@ -1,159 +1,211 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NIKE TIEMPO LIGERA PRO - TINH FOOTBALL</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!-- HEADER-->
     <header class="main-header">
-        <div class="container header-content">
-            <a href="index.html" class="logo">
-                <span>TINH FOOTBALL</span>
-                <img src="img/Soccer Ball.svg" alt="Logo" class="logo-icon">
-            </a>
-            
-            <nav class="main-nav">
-                <a href="about.html">GIỚI THIỆU</a>
-                <a href="giay.html">GIÀY ĐÁ BÓNG</a>
-                <a href="phu-kien.html">PHỤ KIỆN</a>
-                <a href="quan-ao.html">QUẦN ÁO</a>
-                <a href="lien-he.html">LIÊN HỆ</a>
-            </nav>
+      <div class="container header-content">
+        <a href="index.html" class="logo">
+          <span>TINH FOOTBALL</span>
+          <img src="img/Soccer Ball.svg" alt="Logo" class="logo-icon" />
+        </a>
+        <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+        <nav class="main-nav">
+          <a href="about.html">GIỚI THIỆU</a>
+          <a href="giay.html">GIÀY ĐÁ BÓNG</a>
+          <a href="phu-kien.html">PHỤ KIỆN</a>
+          <a href="quan-ao.html">QUẦN ÁO</a>
+          <a href="lien-he.html">LIÊN HỆ</a>
+          <a href="labthuchanh.html">LAB THỰC HÀNH</a>
+        </nav>
 
-            <div class="header-actions">
-                 <div class="search-box" style="position: relative;">
-                <input type="text" id="search-input" placeholder="Tìm sản phẩm..." oninput="showLiveResults(this.value)">
-                <div id="live-search-results" class="live-search-dropdown"></div>
-            </div>
-                <div class="user-controls">
-                    <a href="cart.html" class="icon-btn">
-                        <img src="img/image 5.svg" alt="Cart">
-                        <span id="cart-count">0</span>
-                    </a>
-                    <a href="profile.html" class="icon-btn">
-                        <img src="img/image 6.svg" alt="User">
-                    </a>
-                </div>
-            </div>
+        <div class="header-actions">
+          <div class="search-box" style="position: relative">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Tìm sản phẩm..."
+              oninput="showLiveResults(this.value)"
+            />
+            <div id="live-search-results" class="live-search-dropdown"></div>
+          </div>
+          <div class="user-controls">
+            <a href="cart.html" class="icon-btn">
+              <img src="img/image 5.svg" alt="Cart" />
+              <span id="cart-count">0</span>
+            </a>
+            <a href="profile.html" class="icon-btn">
+              <img src="img/image 6.svg" alt="User" />
+            </a>
+          </div>
         </div>
+      </div>
     </header>
 
     <main class="container section-padding">
-        <div class="detail-top-grid">
-            <!-- Ảnh sản phẩm-->
-            <div class="detail-image">
-                <img src="img2/imgnike/n10.png" alt="Nike Tiempo Ligera Pro TF" id="main-product-img">
-            </div>
-
-            <!-- Thông tin mua hàng -->
-            <div class="detail-info">
-                <h1 class="detail-title">NIKE TIEMPO LIGERA PRO TF - IB4477-040 - ĐEN/XANH BĂNG</h1>
-                
-                <div class="detail-price-box">
-                    <span class="curr-price">1,950,000₫</span>
-                    <span class="old-price">2,150,000₫</span>
-                    <span class="discount-tag">(Tiết kiệm 200,000₫)</span>
-                </div>
-
-                <div class="size-selector">
-                    <span class="label">Kích Thước</span>
-                    <div class="size-grid">
-                        <button class="size-item" onclick="selectSize(this)">39</button>
-                        <button class="size-item" onclick="selectSize(this)">40</button>
-                        <button class="size-item" onclick="selectSize(this)">40.5</button>
-                        <button class="size-item" onclick="selectSize(this)">41</button>
-                        <button class="size-item" onclick="selectSize(this)">41.5</button>
-                        <button class="size-item" onclick="selectSize(this)">42</button>
-                        <button class="size-item" onclick="selectSize(this)">43</button>
-                    </div>
-                </div>
-
-                <div class="qty-selector">
-                    <span class="label">Số Lượng</span>
-                    <div class="qty-controls">
-                        <button class="qty-btn" onclick="changeQty(-1)">-</button>
-                        <input type="number" id="quantity" value="1" min="1">
-                        <button class="qty-btn" onclick="changeQty(1)">+</button>
-                    </div>
-                </div>
-
-                <div class="action-buttons">
-                    <button class="btn-add-cart" onclick="addToCart()">Thêm vào giỏ hàng</button>
-                    <button class="btn-buy-now" onclick="buyNow()">MUA NGAY</button>
-                </div>
-            </div>
+      <div class="detail-top-grid">
+        <!-- Ảnh sản phẩm-->
+        <div class="detail-image">
+          <img
+            src="img2/imgnike/n10.png"
+            alt="Nike Tiempo Ligera Pro TF"
+            id="main-product-img"
+          />
         </div>
 
-        <hr class="divider">
+        <!-- Thông tin mua hàng -->
+        <div class="detail-info">
+          <h1 class="detail-title">
+            NIKE TIEMPO LIGERA PRO TF - IB4477-040 - ĐEN/XANH BĂNG
+          </h1>
 
-        <!-- MÔ TẢ SẢN PHẨM -->
-        <div class="detail-bottom-content">
-            <section class="description">
-                <h2>MÔ TẢ SẢN PHẨM</h2>
-                <h3>NIKE TIEMPO LIGERA PRO TF | BLACK PACK | GIÀY ĐÁ BÓNG SÂN CỎ NHÂN TẠO</h3>
-                <p>Sức mạnh từ bóng đêm - Đẳng cấp kiểm soát bóng thượng thừa. Nằm trong bộ sưu tập <strong>"Black Pack"</strong> quyền uy, đôi Tiempo Ligera Pro mang diện mạo huyền bí với phối màu Đen chủ đạo kết hợp cùng sắc xanh băng (Ice Blue). Đây là lựa chọn hoàn hảo cho những cầu thủ ưa thích sự tinh tế và chắc chắn trong từng pha xử lý bóng.</p>
-                
-                <h3 style="margin-top: 20px;">Công nghệ và lợi ích nổi bật</h3>
-                <ul>
-                    <li><strong>Upper TechLeather:</strong> Da nhân tạo thế hệ mới vô cùng mềm mại, mang lại cảm giác bóng đồng nhất ngay cả trong điều kiện ẩm ướt.</li>
-                    <li><strong>Glove Like Fit:</strong> Thiết kế ôm khít hoàn hảo như một đôi găng tay, thích ứng linh hoạt theo dáng bàn chân mà không bị giãn quá đà.</li>
-                    <li><strong>Vân nổi Stitched:</strong> Các đường gân dập nổi tại vùng tiếp xúc bóng giúp tăng ma sát, hỗ trợ rê dắt sáng tạo và kiểm soát bóng ổn định.</li>
-                    <li><strong>Đệm ReactX Cushioning:</strong> Công nghệ đệm cao cấp nhất giúp hấp thụ chấn lực và hoàn trả năng lượng, bảo vệ đôi chân tối đa suốt trận đấu.</li>
-                    <li><strong>Đế cao su TF bám sân:</strong> Hệ thống đinh dăm đa hướng giúp cầu thủ tự tin xoay trở và phanh gấp trong không gian hẹp.</li>
-                </ul>
-            </section>
+          <div class="detail-price-box">
+            <span class="curr-price">1,950,000₫</span>
+            <span class="old-price">2,150,000₫</span>
+            <span class="discount-tag">(Tiết kiệm 200,000₫)</span>
+          </div>
 
-            <!-- CHÍNH SÁCH BẢO HÀNH -->
-            <section class="policy">
-                <h2>CHÍNH SÁCH BẢO HÀNH</h2>
-                
-                <h3>1. Thời hạn bảo hành</h3>
-                <p>TINH FOOTBALL hỗ trợ bảo hành sửa chữa miễn phí trong vòng 6 tháng đối với các sản phẩm do chính TINH FOOTBALL phân phối.</p>
+          <div class="size-selector">
+            <span class="label">Kích Thước</span>
+            <div class="size-grid">
+              <button class="size-item" onclick="selectSize(this)">39</button>
+              <button class="size-item" onclick="selectSize(this)">40</button>
+              <button class="size-item" onclick="selectSize(this)">40.5</button>
+              <button class="size-item" onclick="selectSize(this)">41</button>
+              <button class="size-item" onclick="selectSize(this)">41.5</button>
+              <button class="size-item" onclick="selectSize(this)">42</button>
+              <button class="size-item" onclick="selectSize(this)">43</button>
+            </div>
+          </div>
 
-                <h3>2. Trường hợp được bảo hành miễn phí</h3>
-                <ul>
-                    <li>Hở keo</li>
-                    <li>Đứt chỉ</li>
-                    <li>Các lỗi kỹ thuật tương tự phát sinh từ phía nhà sản xuất</li>
-                </ul>
+          <div class="qty-selector">
+            <span class="label">Số Lượng</span>
+            <div class="qty-controls">
+              <button class="qty-btn" onclick="changeQty(-1)">-</button>
+              <input type="number" id="quantity" value="1" min="1" />
+              <button class="qty-btn" onclick="changeQty(1)">+</button>
+            </div>
+          </div>
 
-                <h3>3. Thông tin cần có để được hỗ trợ bảo hành</h3>
-                <p>- Hóa đơn mua hàng</p>
-                <p>- Dữ liệu đơn hàng trên hệ thống</p>
-                <p>- Thông tin kích hoạt bảo hành của shop</p>
-            </section>
+          <div class="action-buttons">
+            <button class="btn-add-cart" onclick="addToCart()">
+              Thêm vào giỏ hàng
+            </button>
+            <button class="btn-buy-now" onclick="buyNow()">MUA NGAY</button>
+          </div>
         </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- MÔ TẢ SẢN PHẨM -->
+      <div class="detail-bottom-content">
+        <section class="description">
+          <h2>MÔ TẢ SẢN PHẨM</h2>
+          <h3>
+            NIKE TIEMPO LIGERA PRO TF | BLACK PACK | GIÀY ĐÁ BÓNG SÂN CỎ NHÂN
+            TẠO
+          </h3>
+          <p>
+            Sức mạnh từ bóng đêm - Đẳng cấp kiểm soát bóng thượng thừa. Nằm
+            trong bộ sưu tập <strong>"Black Pack"</strong> quyền uy, đôi Tiempo
+            Ligera Pro mang diện mạo huyền bí với phối màu Đen chủ đạo kết hợp
+            cùng sắc xanh băng (Ice Blue). Đây là lựa chọn hoàn hảo cho những
+            cầu thủ ưa thích sự tinh tế và chắc chắn trong từng pha xử lý bóng.
+          </p>
+
+          <h3 style="margin-top: 20px">Công nghệ và lợi ích nổi bật</h3>
+          <ul>
+            <li>
+              <strong>Upper TechLeather:</strong> Da nhân tạo thế hệ mới vô cùng
+              mềm mại, mang lại cảm giác bóng đồng nhất ngay cả trong điều kiện
+              ẩm ướt.
+            </li>
+            <li>
+              <strong>Glove Like Fit:</strong> Thiết kế ôm khít hoàn hảo như một
+              đôi găng tay, thích ứng linh hoạt theo dáng bàn chân mà không bị
+              giãn quá đà.
+            </li>
+            <li>
+              <strong>Vân nổi Stitched:</strong> Các đường gân dập nổi tại vùng
+              tiếp xúc bóng giúp tăng ma sát, hỗ trợ rê dắt sáng tạo và kiểm
+              soát bóng ổn định.
+            </li>
+            <li>
+              <strong>Đệm ReactX Cushioning:</strong> Công nghệ đệm cao cấp nhất
+              giúp hấp thụ chấn lực và hoàn trả năng lượng, bảo vệ đôi chân tối
+              đa suốt trận đấu.
+            </li>
+            <li>
+              <strong>Đế cao su TF bám sân:</strong> Hệ thống đinh dăm đa hướng
+              giúp cầu thủ tự tin xoay trở và phanh gấp trong không gian hẹp.
+            </li>
+          </ul>
+        </section>
+
+        <!-- CHÍNH SÁCH BẢO HÀNH -->
+        <section class="policy">
+          <h2>CHÍNH SÁCH BẢO HÀNH</h2>
+
+          <h3>1. Thời hạn bảo hành</h3>
+          <p>
+            TINH FOOTBALL hỗ trợ bảo hành sửa chữa miễn phí trong vòng 6 tháng
+            đối với các sản phẩm do chính TINH FOOTBALL phân phối.
+          </p>
+
+          <h3>2. Trường hợp được bảo hành miễn phí</h3>
+          <ul>
+            <li>Hở keo</li>
+            <li>Đứt chỉ</li>
+            <li>Các lỗi kỹ thuật tương tự phát sinh từ phía nhà sản xuất</li>
+          </ul>
+
+          <h3>3. Thông tin cần có để được hỗ trợ bảo hành</h3>
+          <p>- Hóa đơn mua hàng</p>
+          <p>- Dữ liệu đơn hàng trên hệ thống</p>
+          <p>- Thông tin kích hoạt bảo hành của shop</p>
+        </section>
+      </div>
     </main>
 
     <!-- FOOTER -->
-    <footer class="main-footer" style="background-image: url('img/footer.png');">
-        <div class="footer-overlay">
-            <div class="container footer-flex">
-                <div class="footer-left">
-                    <h2>TINH FOOTBALL</h2>
-                    <p>ĐỒNG HÀNH CÙNG BẠN TRÊN MỌI MẶT SÂN CỎ</p>
-                </div>
-                <div class="footer-right">
-                    <div class="f-col">
-                        <h3>Hotline</h3>
-                        <a href="tel:0362547895" class="footer-link">0362547895</a>
-                        <a href="chinh-sach.html" class="footer-link">Chính sách mua hàng</a>
-                    </div>
-                    <div class="f-col">
-                        <a href="cham-soc.html" class="footer-link">Chăm sóc hỗ trợ</a>
-                        <p class="footer-text-only">Hỗ trợ đổi trả</p>
-                        <a href="#" class="footer-link">Địa chỉ: 180 Cao Lỗ, P4, Q8</a>
-                    </div>
-                </div>
+    <footer
+      class="main-footer"
+      style="background-image: url(&quot;img/footer.png&quot;)"
+    >
+      <div class="footer-overlay">
+        <div class="container footer-flex">
+          <div class="footer-left">
+            <h2>TINH FOOTBALL</h2>
+            <p>ĐỒNG HÀNH CÙNG BẠN TRÊN MỌI MẶT SÂN CỎ</p>
+          </div>
+          <div class="footer-right">
+            <div class="f-col">
+              <h3>Hotline</h3>
+              <a href="tel:0362547895" class="footer-link">0362547895</a>
+              <a href="chinh-sach.html" class="footer-link"
+                >Chính sách mua hàng</a
+              >
             </div>
-            <div class="copyright">© 2026 TINH FOOTBALL. All rights reserved.</div>
+            <div class="f-col">
+              <a href="cham-soc.html" class="footer-link">Chăm sóc hỗ trợ</a>
+              <p class="footer-text-only">Hỗ trợ đổi trả</p>
+              <a href="#" class="footer-link">Địa chỉ: 180 Cao Lỗ, P4, Q8</a>
+            </div>
+          </div>
         </div>
+        <div class="copyright">© 2026 TINH FOOTBALL. All rights reserved.</div>
+      </div>
     </footer>
     <script src="js/js1"></script>
-</body>
+  </body>
 </html>
